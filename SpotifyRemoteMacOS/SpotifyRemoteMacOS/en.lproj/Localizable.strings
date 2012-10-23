@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  SpotifyRemoteMacOS
+
+  Created by Boy van Amstel on 13-08-12.
+  Copyright (c) 2012 Danger Cove. All rights reserved.
+*/
+
+"Menu bar icon mouse over" = "Reign for Spotify";
+
+"SERVER_FAILED_TO_START_TITLE" = "Server failed to start";
+"SERVER_FAILED_TO_START_MESSAGE" = "The server failed to start. Make sure the selected port isn't occupied and the connection isn't blocked by a firewall.";
+
+"NEW_THEME_FOLDER_TITLE" = "Copy default theme files to folder";
+"NEW_THEME_FOLDER_MESSAGE" = "We're about to copy the default theme files to:\n%@\n\nThis enables you to modify the theme and select a custom background.";
+
+"EXISTING_THEME_FOLDER_TITLE" = "Existing web page found";
+"EXISTING_THEME_FOLDER_MESSAGE" = "There's already an index.html present at %@. Select OK to start using this theme, or manually remove existing files to install a fresh copy.";
+
+"CONFIRM" = "OK";
+"SELECT" = "Select";
+"COPY_FILES" = "Copy Files";
+"OVERWRITE" = "Overwrite";
+"OPEN_IN_FINDER" = "Open in Finder..";
+"CANCEL" = "Cancel";
+
+"EMAIL_TITLE" = "Reign for Spotify";
+"EMAIL_BODY" = "Hi,\n\nCheck my Reign for Spotify server at: http://%@:%i";
+
+"Spotify is not playing" = "Spotify is not playing";
+
+"Preferences" = "Reign for Spotify Preferences";
+
+"General" = "General";
+"Server" = "Server";
+"Theme" = "Theme";
+
+"Stop Server" = "Stop Server";
+"Start Server" = "Start Server";
+"Running at %@:%i" = "Running at %@:%i";
+
+"Select theme path" = "Select";
+"%@ (default)" = "%@ (default)";
+
+"Advanced Theming Box Disabled" = "Advanced Theming (disabled)";
+"Advanced Theming Box Enabled" = "Advanced Theming (enabled)";

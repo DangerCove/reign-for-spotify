@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>staticServerPort</key>
+	<integer>45454</integer>
+	<key>dynamicServerPort</key>
+	<true/>
+	<key>autostartServer</key>
+	<true/>
+	<key>enableStartup</key>
+	<false/>
+	<key>themePath</key>
+	<string></string>
+	<key>serverWelcomeText</key>
+	<string>Welcome to Spotify on %%hostname%%!</string>
+	<key>broadcastServer</key>
+	<true/>
+	<key>setupDone</key>
+	<false/>
+	<key>allowForcedCommands</key>
+	<true/>
+</dict>
+</plist>
