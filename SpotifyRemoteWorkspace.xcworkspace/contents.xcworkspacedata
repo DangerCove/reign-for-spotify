@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SpotifyRemoteMacOS/SpotifyRemoteMacOS/Server/Resources/Web/play-track">
+   </FileRef>
+   <FileRef
       location = "group:SpotifyRemoteMacOS/SpotifyRemoteMacOS.xcodeproj">
    </FileRef>
 </Workspace>
