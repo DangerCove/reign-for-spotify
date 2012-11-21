@@ -49,6 +49,12 @@ Alex Zielenski - [StartAtLoginController](https://github.com/alexzielenski/Start
 
 Andy Matuschak - [Sparkle](http://sparkle.andymatuschak.org/)
 
+# Contributors
+
+Boy van Amstel - [boyvanamstel](https://github.com/boyvanamstel)
+
+Dan Gilbert - [daentech](https://github.com/daentech)
+
 # License for the rest of it
 
 New BSD License, see `LICENSE` for details.
