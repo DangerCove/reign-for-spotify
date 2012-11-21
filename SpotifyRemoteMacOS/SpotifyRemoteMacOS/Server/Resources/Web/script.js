@@ -55,7 +55,32 @@ $(document).ready(function() {
       }
     }
   });
+  $('#search_song').submit( function(e) {
+    e.preventDefault();
+    var field_array = $('#search_keywords').val().split(' - '),
+    artist = field_array[0],
+    title = field_array[1];
+
+    $.ajax({
+      url: 'http://developer.echonest.com/api/v4/song/search?api_key=FILDTEOIK2HBORODV&format=jsonp&results=1&artist=' + escape(artist) + '&title=' + escape(title) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
+      dataType: 'jsonp',
+      success: function(data) {
+        if(data.response.songs && data.response.songs.length > 0) {
+          var song = data.response.songs[0];
+          if(song.tracks) {
+            var track = song.tracks[0],
+                track_uri = track.foreign_id.replace('spotify-WW', 'spotify');
+            $.get('/play-track/' + track_uri);
+            update();
+          }
+        } else {
+          alert("Didn't find anything for: " + artist + " - " + title);
+        }
+      }
+    });
+  });
+
   update();
   updateTimeout = setTimeout(update, timeout);
-                  dropTrackSetup();
-                  });
+  dropTrackSetup();
+});
