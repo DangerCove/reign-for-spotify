@@ -57,4 +57,5 @@ $(document).ready(function() {
   });
   update();
   updateTimeout = setTimeout(update, timeout);
-})
+                  dropTrackSetup();
+                  });
