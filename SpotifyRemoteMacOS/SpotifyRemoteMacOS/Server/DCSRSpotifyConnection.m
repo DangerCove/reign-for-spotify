@@ -133,6 +133,11 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
             [self runAppleScript:@"playpause track"];
             commandPath = YES;
         }
+        if ([relativePath rangeOfString:@"/play-track/"].location != NSNotFound) {
+            [self runAppleScript:[NSString stringWithFormat:@"play track \"%@\"\n", [relativePath substringFromIndex:12]]];
+            commandPath = YES;
+            path = [path substringToIndex:11];
+        }
         if(commandPath == YES) {
             DCSRHTTPFileResponse *response = [[DCSRHTTPFileResponse alloc] initWithFilePath:[self filePathForURI:path] forConnection:self withContentType:@"text/plain" andCache:NO];
             return response;
