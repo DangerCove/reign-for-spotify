@@ -18,8 +18,6 @@ function drop(e) {
             track_uri = "spotify:user:" + user + ":playlist:" + track_uri.substring(track_uri.lastIndexOf('/') + 1);
         } else {
             track_uri = "spotify:track:" + track_uri.substring(track_uri.lastIndexOf('/') + 1);
-            console.log(track_uri);
-            
         }
         valid = true;
     } else if(track_uri.substring(0, spotify_uri_string.length) == spotify_uri_string){
