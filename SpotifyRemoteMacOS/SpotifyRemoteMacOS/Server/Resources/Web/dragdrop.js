@@ -42,8 +42,8 @@ function ignoreDrag(e) {
 }
 
 var dropTrackSetup = (function(){
-                      $('body')
-                      .bind('dragenter', ignoreDrag)
-                      .bind('dragover', ignoreDrag)
-                      .bind('drop', drop);
+      $('body')
+          .bind('dragenter', ignoreDrag)
+          .bind('dragover', ignoreDrag)
+          .bind('drop', drop);
 });
