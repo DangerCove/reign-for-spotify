@@ -57,12 +57,10 @@ $(document).ready(function() {
   });
   $('#search_song').submit( function(e) {
     e.preventDefault();
-    var field_array = $('#search_keywords').val().split(' - '),
-    artist = field_array[0],
-    title = field_array[1];
+    var search_term = $('#search_keywords').val();
 
     $.ajax({
-      url: 'http://developer.echonest.com/api/v4/song/search?api_key=FILDTEOIK2HBORODV&format=jsonp&results=1&artist=' + escape(artist) + '&title=' + escape(title) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
+      url: 'http://developer.echonest.com/api/v4/song/search?api_key=FILDTEOIK2HBORODV&format=jsonp&results=1&combined=' + escape(search_term) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
       dataType: 'jsonp',
       success: function(data) {
         if(data.response.songs && data.response.songs.length > 0) {
