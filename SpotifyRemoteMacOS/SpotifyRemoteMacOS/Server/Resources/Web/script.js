@@ -40,9 +40,33 @@ var displayTrackList = (function(track_list){
     // We have a track list returned, so display it
                         $('#searchlist').css({'display': 'block', 'height': $('body').height()});
                         $('#searchlist .listbox').css({'height':$('body').height() - $('#searchlist .title').height()});
+                        $('#songlist').empty();
                         $('#searchlist').animate({'top': 0});
+                        // Show a spinner
+                        var song_list = $('<ul></ul>');
+                        // Display the list
+                        for(i = 0; i < track_list.length; i++){
+                        var track_uri = track_list[i].tracks[0].foreign_id.replace('spotify-WW', 'spotify');
+                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'">'+track_list[i].title+'</a></li>');
+                        }
+                        $('#songlist').append(song_list);
+                        // Hide the spinner
+
+                        
+
                         
 });
+
+var play_search_track = function(id){
+    $.get('/play-track/' + id, function(){
+          update();
+          });
+    $('#searchlist').animate({'top':$('body').height()}, 500, null, function(){
+                             $('#searchlist').css({'display':'none'});
+                             }
+                             
+                             );
+}
 
 $(document).ready(function() {
   $('#controls a').click(function(e) {
@@ -70,14 +94,15 @@ $(document).ready(function() {
   $('#search_song').submit( function(e) {
     e.preventDefault();
     var search_term = $('#search_keywords').val();
-                           if(search_term.length == 0)
+                           if(search_term.length == 0){
+                           alert("Please provide a search term");
                            return;
+                           }
 
     $.ajax({
       url: 'http://developer.echonest.com/api/v4/song/search?api_key=FILDTEOIK2HBORODV&format=jsonp&combined=' + escape(search_term) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
       dataType: 'jsonp',
       success: function(data) {
-           console.log("Track Count: " + data.response.songs.length);
         if(data.response.songs && data.response.songs.length > 1) {
             // We have more than one track, so display a list of them
            displayTrackList(data.response.songs);

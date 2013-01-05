@@ -124,6 +124,13 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
     border-top: 1px solid #333;
     width:100%;
     padding:0.3em;
+    color: #222;
+}
+
+#searchlist li a {
+    display: block;
+    color: #222;
+    width:100%;
 }
 
 #main { position: relative; background: url('bg.png') 50% 50%; }
