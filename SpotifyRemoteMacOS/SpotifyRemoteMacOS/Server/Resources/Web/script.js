@@ -99,7 +99,7 @@ $(document).ready(function() {
                            }
 
     $.ajax({
-      url: 'http://developer.echonest.com/api/v4/song/search?api_key=FILDTEOIK2HBORODV&format=jsonp&combined=' + escape(search_term) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
+      url: 'http://developer.echonest.com/api/v4/song/search?api_key=FILDTEOIK2HBORODV&format=jsonp&results=50&combined=' + escape(search_term) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
       dataType: 'jsonp',
       success: function(data) {
         if(data.response.songs && data.response.songs.length > 1) {

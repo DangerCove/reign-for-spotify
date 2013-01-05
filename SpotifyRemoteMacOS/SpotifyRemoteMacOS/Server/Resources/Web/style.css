@@ -126,7 +126,8 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
     background: #FFF;
     border-top: 1px solid #333;
     width:100%;
-    padding:0.3em;
+    font-size:1.5em;
+    padding:0.5em;
     color: #222;
 }
 
