@@ -105,11 +105,10 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 
 #searchlist .title {
   text-align:center;
+  padding: 0.5em;
 }
 
 #searchlist .closebutton {
-  float: right;
-  margin-right:0.4em;
   background: #CCC;
 }
 
@@ -117,6 +116,10 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
   background: #FFF;
   overflow-x:hidden;
   overflow-y: auto;
+}
+
+#searchlist ul {
+    width: 100%;
 }
 
 #searchlist li {
@@ -131,6 +134,15 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
     display: block;
     color: #222;
     width:100%;
+}
+
+.closebutton {
+    background-color: #33FF00;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    padding: 5px;	
+    float: right;
+    margin-right:0.4em;
 }
 
 #main { position: relative; background: url('bg.png') 50% 50%; }

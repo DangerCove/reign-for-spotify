@@ -42,7 +42,7 @@ var displayTrackList = (function(track_list){
                         $('#searchlist .listbox').css({'height':$('body').height() - $('#searchlist .title').height()});
                         $('#songlist').empty();
                         $('#searchlist').animate({'top': 0});
-                        // Show a spinner
+                        // TODO: Show a spinner
                         var song_list = $('<ul></ul>');
                         // Display the list
                         for(i = 0; i < track_list.length; i++){
@@ -50,7 +50,7 @@ var displayTrackList = (function(track_list){
                             song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'">'+track_list[i].title+' - ' + track_list[i].artist_name + '</a></li>');
                         }
                         $('#songlist').append(song_list);
-                        // Hide the spinner
+                        // Todo: Hide the spinner
 
                         
 
