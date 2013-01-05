@@ -58,11 +58,10 @@ var displayTrackList = (function(track_list){
 });
 
 var play_search_track = function(id){
-    $.get('/play-track/' + id, function(){
-          update();
-          });
+    $.get('/play-track/' + id);
     $('#searchlist').animate({'top':$('body').height()}, 500, null, function(){
                              $('#searchlist').css({'display':'none'});
+                           update();
                              }
                              
                              );
