@@ -46,8 +46,8 @@ var displayTrackList = (function(track_list){
                         var song_list = $('<ul></ul>');
                         // Display the list
                         for(i = 0; i < track_list.length; i++){
-                        var track_uri = track_list[i].tracks[0].foreign_id.replace('spotify-WW', 'spotify');
-                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'">'+track_list[i].title+' - ' + track_list[i].artist_name + '</a></li>');
+                        var track_uri = track_list[i].href;
+                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'">'+track_list[i].name+' - ' + track_list[i].artists[0].name + '</a></li>');
                         }
                         $('#songlist').append(song_list);
                         // Todo: Hide the spinner
@@ -99,18 +99,18 @@ $(document).ready(function() {
                            }
 
     $.ajax({
-      url: 'http://developer.echonest.com/api/v4/song/search?api_key=FILDTEOIK2HBORODV&format=jsonp&results=50&combined=' + escape(search_term) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
-      dataType: 'jsonp',
+      url: 'http://ws.spotify.com/search/1/track.json?q=' + escape(search_term),
+      dataType: 'json',
       success: function(data) {
-        if(data.response.songs && data.response.songs.length > 1) {
+           
+        if(data.tracks && data.tracks.length > 1) {
             // We have more than one track, so display a list of them
-           displayTrackList(data.response.songs);
-        } else if (data.response.songs && data.response.songs.length > 0) {
+           displayTrackList(data.tracks);
+        } else if (data.tracks && data.tracks.length > 0) {
            // We only have one track returned. It was probably a hit, so play it
-          var song = data.response.songs[0];
-          if(song.tracks) {
-            var track = song.tracks[0],
-                track_uri = track.foreign_id.replace('spotify-WW', 'spotify');
+          var song = data.tracks[0];
+          if(song) {
+                track_uri = track.href;
             $.get('/play-track/' + track_uri);
             update();
           }
