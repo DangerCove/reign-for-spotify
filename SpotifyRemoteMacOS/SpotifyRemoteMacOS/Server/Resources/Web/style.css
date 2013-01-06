@@ -150,6 +150,14 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
     cursor:pointer;
 }
 
+.search_title {
+    font-size: 1.2em;
+}
+
+.search_artist {
+    font-size: 1.0em;
+}
+
 #main { position: relative; background: url('bg.png') 50% 50%; }
 
 #controls { position: absolute; bottom: 36px; width: 168px; margin-left: -84px; left: 50% }

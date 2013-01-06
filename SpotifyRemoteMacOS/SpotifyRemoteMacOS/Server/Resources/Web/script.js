@@ -47,7 +47,7 @@ var displayTrackList = (function(track_list){
                         // Display the list
                         for(i = 0; i < track_list.length; i++){
                         var track_uri = track_list[i].tracks[0].foreign_id.replace('spotify-WW', 'spotify');
-                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'">'+track_list[i].title+' - ' + track_list[i].artist_name + '</a></li>');
+                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'"><span class="search_title">'+track_list[i].title+'</span><br /><span class="search_artist">' + track_list[i].artist_name + '</span></a></li>');
                         }
                         $('#songlist').append(song_list);
                         // Todo: Hide the spinner
