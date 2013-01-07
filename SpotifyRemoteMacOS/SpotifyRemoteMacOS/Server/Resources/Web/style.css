@@ -107,6 +107,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 #searchlist .title {
   text-align:center;
   padding: 0.5em;
+  font-size: 1.2em;
 }
 
 #searchlist .closebutton {
@@ -148,6 +149,14 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
     margin-right:0.4em;
     color: #222;
     cursor:pointer;
+}
+
+.search_title {
+    font-size: 1.2em;
+}
+
+.search_artist {
+    font-size: 1.0em;
 }
 
 #main { position: relative; background: url('bg.png') 50% 50%; }
