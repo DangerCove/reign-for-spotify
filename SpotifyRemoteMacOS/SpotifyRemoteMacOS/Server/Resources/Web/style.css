@@ -87,7 +87,7 @@ a:visited { color: #fff; text-decoration: none; }
 ol, ul { list-style: none; margin: 0; padding: 0; }
 .clearfix li { float: left; }
 
-#header, #footer {
+#header, #footer, #searchlist {
   background: #222;
   background: rgba(0,0,0,0.7);
   width: 100%;
@@ -96,6 +96,68 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
   z-index: 1000;
 }
 #footer { bottom: 0; font-size: 12px; }
+
+#searchlist {
+  z-index: 1500;
+  text-align:left;
+  background: #222;
+  display:none;
+}
+
+#searchlist .title {
+  text-align:center;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+#searchlist .closebutton {
+  background: #CCC;
+}
+
+#searchlist .listbox {
+  background: #FFF;
+  overflow-x:hidden;
+  overflow-y: auto;
+}
+
+#searchlist ul {
+    width: 100%;
+}
+
+#searchlist li {
+    background: #FFF;
+    border-top: 1px solid #333;
+    width:100%;
+    font-size:1.5em;
+    color: #222;
+}
+
+#searchlist li a {
+    display: block;
+    color: #222;
+    width:100%;
+    padding:0.5em;
+    cursor:pointer;
+}
+
+.closebutton {
+    background-color: #33FF00;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    padding: 5px;	
+    float: right;
+    margin-right:0.4em;
+    color: #222;
+    cursor:pointer;
+}
+
+.search_title {
+    font-size: 1.2em;
+}
+
+.search_artist {
+    font-size: 1.0em;
+}
 
 #main { position: relative; background: url('bg.png') 50% 50%; }
 
