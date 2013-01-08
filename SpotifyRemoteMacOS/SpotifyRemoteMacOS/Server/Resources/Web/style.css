@@ -144,7 +144,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
     background-color: #33FF00;
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
-    padding: 5px;	
+    padding: 5px;
     float: right;
     margin-right:0.4em;
     color: #222;
@@ -191,6 +191,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 
 #footer .get_reign { display: inline-block; padding-left: 20px; margin: 8px 0; background: url('sprite.png') no-repeat -776px -8px; }
 
+#search_song { margin-bottom: 10px; }
 
 @media only screen and (min-width: 35em) {
   body { font-size: 150%; }
@@ -219,6 +220,8 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 
   #playlist { bottom: 220px; }
   #playlist .now_playing { padding: 8px 16px; }
+
+  #search_song { margin-bottom: 20px; }
 }
 
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
