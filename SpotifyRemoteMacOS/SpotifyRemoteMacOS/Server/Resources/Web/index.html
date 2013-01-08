@@ -11,7 +11,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <link rel="stylesheet" href="style.css">
-
+  <script src="jquery.js"></script>
   <script src="modernizr.min.js"></script>
   <script src="dragdrop.js"></script>
 </head>
@@ -19,6 +19,12 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header id="header" class="container">
     <h1>%%WELCOME_TEXT%%</h1>
+    <form id="search_song" action="#" method="post">
+        <fieldset>
+        <input id="search_keywords" name="keywords" type="text" placeholder="Artist - Song">
+        <input name="submig" type="submit" value="Search">
+        </fieldset>
+    </form>
   </header>
   <div id="main" class="container">
     <h2 class="visuallyhidden">Controls:</h2>
@@ -44,7 +50,19 @@
   <footer id="footer" class="container">
     <a class="get_reign" href="http://reignalot.com" target="_blank">Get Reign for Spotify</a>
   </footer>
-
+  <div id="searchlist">
+  <!-- The searchlist should contain a close button -->
+    <div class="title">
+        Song Search
+        <div id="closesearchbutton" class="closebutton" >close</div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="listbox">
+      <div class="" id="songlist">
+      </div>
+    </div>
+  <!-- And the list of matching tracks -->
+  </div>
   <script src="script.js"></script>
 
   <script>
