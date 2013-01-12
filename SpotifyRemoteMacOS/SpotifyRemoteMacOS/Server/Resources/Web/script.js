@@ -25,7 +25,7 @@ function update() {
         $('#playpause').attr('class', 'play');
         break;
     }
-            console.log(data.shuffle);
+
     switch(data.shuffle){
         case true:
             $('#shuffle').attr('class','shuffleon');
