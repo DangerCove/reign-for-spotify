@@ -25,6 +25,15 @@ function update() {
         $('#playpause').attr('class', 'play');
         break;
     }
+    
+    switch(data.shuffle){
+        case true:
+            $('#shuffle').attr('class','shuffleon');
+        break;
+        default:
+            $('#shuffle').attr('class','shuffleoff');
+        break;
+    }
     if(currentState == 'off' || allowForce == false) {
       $('#controls').attr('class', 'off');
     }
@@ -32,7 +41,6 @@ function update() {
     $('.now_playing').text(data['now_playing']);
     $('.now_playing').attr('href', data.url);
 
-    console.log("Shuffle state: " + data.shuffle);
     clearTimeout(updateTimeout);
     updateTimeout = setTimeout(update, timeout);
   });

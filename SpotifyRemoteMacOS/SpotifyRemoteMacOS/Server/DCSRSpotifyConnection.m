@@ -133,6 +133,10 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
             [self runAppleScript:@"playpause track"];
             commandPath = YES;
         }
+        if([relativePath isEqualToString:@"/shuffle"]) {
+            [self runAppleScript:@"set shuffling to not shuffling"];
+            commandPath = YES;
+        }
         if ([relativePath rangeOfString:@"/play-track/"].location != NSNotFound) {
             [self runAppleScript:[NSString stringWithFormat:@"play track \"%@\"\n", [relativePath substringFromIndex:12]]];
             commandPath = YES;
@@ -219,7 +223,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
             NSAppleEventDescriptor *returnStarred = [self runAppleScript:@"starred of current track as boolean"];
             starred = [returnStarred booleanValue];
             
-            NSAppleEventDescriptor *returnShuffle = [self runAppleScript:@"shuffling enabled as boolean"];
+            NSAppleEventDescriptor *returnShuffle = [self runAppleScript:@"shuffling as boolean"];
             shuffle = [returnShuffle booleanValue];
 
             NSAppleEventDescriptor *returnURL = [self runAppleScript:@"spotify url of current track as string"];

@@ -161,7 +161,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 
 #main { position: relative; background: url('bg.png') 50% 50%; }
 
-#controls { position: absolute; bottom: 36px; width: 168px; margin-left: -84px; left: 50% }
+#controls { position: absolute; bottom: 36px; width: 230px; margin-left: -115px; left: 50% }
 #controls a { display: block; width: 48px; height: 48px; background: url('sprite.png') no-repeat; font-size: 0; margin: 4px; }
 
 #previous { background-position: -664px -8px !important; }
@@ -177,6 +177,15 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 #controls.off #playpause { background-position: -552px -120px !important; }
 #controls.off #playpause.pause:hover,
 #controls.off #playpause.pause { background-position: -608px -120px !important; }
+
+#shuffle { background-position: -552px -8px !important }
+#shuffle:hover { background-position: -552px -64px !important }
+#shuffle.shuffleon { background-position: -608px -8px !important }
+#shuffle.shuffleon:hover { background-position: -608px -64px !important }
+#controls.off #shuffle:hover,
+#controls.off #shuffle { background-position: -552px -120px !important; }
+#controls.off #shuffle.shuffleon:hover,
+#controls.off #shuffle.shuffleon { background-position: -608px -120px !important; }
 
 #next { background-position: -720px -8px !important; }
 #next:hover { background-position: -720px -64px !important }
@@ -196,7 +205,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 @media only screen and (min-width: 35em) {
   body { font-size: 150%; }
 
-  #controls { bottom: 50px; width: 432px; margin-left: -216px; left: 50% }
+  #controls { bottom: 50px; width: 576px; margin-left: -288px; left: 50% }
   #controls a { width: 128px; height: 128px; margin: 8px; }
 
   #previous { background-position: -280px -8px !important; }
@@ -212,6 +221,15 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
   #controls.off #playpause { background-position: -8px -280px !important; }
   #controls.off #playpause.pause:hover,
   #controls.off #playpause.pause { background-position: -144px -280px !important }
+  
+  #shuffle { background-position: -8px -8px !important }
+  #shuffle:hover { background-position: -8px -144px !important }
+  #shuffle.shuffleon { background-position: -144px -8px !important }
+  #shuffle.shuffleon:hover { background-position: -144px -144px !important }
+  #controls.off #shuffle:hover,
+  #controls.off #shuffle { background-position: -8px -280px !important; }
+  #controls.off #shuffle.shuffleon:hover,
+  #controls.off #shuffle.shuffleon { background-position: -144px -280px !important }
 
   #next { background-position: -416px -8px !important; }
   #next:hover { background-position: -416px -144px !important; }
