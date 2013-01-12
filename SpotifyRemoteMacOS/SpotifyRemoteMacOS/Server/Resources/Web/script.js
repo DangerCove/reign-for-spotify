@@ -46,7 +46,7 @@ var displayTrackList = (function(track_list){
                         var song_list = $('<ul></ul>');
                         // Display the list
                         for(i = 0; i < track_list.length; i++){
-                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_list[i].href+'"><span class="search_title">'+track_list[i].name+'</span><br /><span class="search_artist">' + track_list[i].artists[0].name + '</span></a></li>');
+                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_list[i].href+'"><span class="search_title">'+track_list[i].name+'</span><br /><span class="search_artist">' + track_list[i].artists[0].name + ' - ' + track_list[i].album.name + '</span></a></li>');
                         }
                         $('#songlist').append(song_list);
                         // Todo: Hide the spinner
