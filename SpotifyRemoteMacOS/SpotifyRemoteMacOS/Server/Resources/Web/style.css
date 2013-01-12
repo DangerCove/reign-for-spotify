@@ -222,14 +222,12 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
   #controls.off #playpause.pause:hover,
   #controls.off #playpause.pause { background-position: -144px -280px !important }
   
-  #shuffle { background-position: -8px -8px !important }
-  #shuffle:hover { background-position: -8px -144px !important }
-  #shuffle.shuffleon { background-position: -144px -8px !important }
-  #shuffle.shuffleon:hover { background-position: -144px -144px !important }
+  #shuffle { background-position: -8px -416px !important }
+  #shuffle:hover { background-position: -144px -416px !important }
+  #shuffle.shuffleon { background-position: -144px -416px !important }
+  #shuffle.shuffleon:hover { background-position: -144px -416px !important }
   #controls.off #shuffle:hover,
-  #controls.off #shuffle { background-position: -8px -280px !important; }
-  #controls.off #shuffle.shuffleon:hover,
-  #controls.off #shuffle.shuffleon { background-position: -144px -280px !important }
+  #controls.off #shuffle { background-position: -280px -280px !important; }
 
   #next { background-position: -416px -8px !important; }
   #next:hover { background-position: -416px -144px !important; }
