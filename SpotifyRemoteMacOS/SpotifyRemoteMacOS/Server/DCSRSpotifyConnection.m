@@ -184,6 +184,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
         BOOL starred;
         NSString *url;
         NSString *cover;
+        BOOL shuffle;
         
         if(!state) {
             state = @"off";
@@ -217,6 +218,9 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
 
             NSAppleEventDescriptor *returnStarred = [self runAppleScript:@"starred of current track as boolean"];
             starred = [returnStarred booleanValue];
+            
+            NSAppleEventDescriptor *returnShuffle = [self runAppleScript:@"shuffling enabled as boolean"];
+            shuffle = [returnShuffle booleanValue];
 
             NSAppleEventDescriptor *returnURL = [self runAppleScript:@"spotify url of current track as string"];
             url = [returnURL stringValue];
@@ -246,6 +250,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
                                    cover, @"cover",
                                    nowPlaying, @"now_playing",
                                    [NSNumber numberWithBool:[[DCPreferencesManager instance].preferences boolForKey:@"allowForcedCommands"]], @"allow_force",
+                                   [NSNumber numberWithBool:shuffle],@"shuffle",
                                    nil];
         
         NSError *error;

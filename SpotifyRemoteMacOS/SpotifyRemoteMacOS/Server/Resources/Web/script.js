@@ -31,6 +31,8 @@ function update() {
     $('.track_cover').attr('src', data.cover);
     $('.now_playing').text(data['now_playing']);
     $('.now_playing').attr('href', data.url);
+
+    console.log("Shuffle state: " + data.shuffle);
     clearTimeout(updateTimeout);
     updateTimeout = setTimeout(update, timeout);
   });
