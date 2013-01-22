@@ -142,6 +142,11 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
             commandPath = YES;
             path = [path substringToIndex:11];
         }
+        if ([relativePath rangeOfString:@"/updatetime/"].location != NSNotFound) {
+            [self runAppleScript:[NSString stringWithFormat:@"set player position to \"%@\"\n", [relativePath substringFromIndex:12]]];
+            commandPath = YES;
+            path = [path substringToIndex:11];
+        }
         if(commandPath == YES) {
             DCSRHTTPFileResponse *response = [[DCSRHTTPFileResponse alloc] initWithFilePath:[self filePathForURI:path] forConnection:self withContentType:@"text/plain" andCache:NO];
             return response;
