@@ -52,8 +52,6 @@ function deduplicate(songlist){
        var dup = false;
         
         for(j = 0; j < deduplist.length; j++){
-         
-            console.log("comparing track name: " + deduplist[j].name.toLowerCase() + " to " + track.name.toLowerCase() + " is " + (deduplist[j].name.toLowerCase() == track.name.toLowerCase()));
             if(deduplist[j].name.toLowerCase() == track.name.toLowerCase() && deduplist[j].artistname.toLowerCase() == track.artistname.toLowerCase() && deduplist[j].albumname.toLowerCase() == track.albumname.toLowerCase()){
                 dup = true;
                 break;
