@@ -68,7 +68,11 @@ function deduplicate(songlist){
 function setTimeDisplay(container, seconds){
     var minutes = Math.floor(seconds / 60);
     seconds = seconds % 60;
-    $(container).text(minutes + ":" + (seconds < 10 ? '0' : '') + seconds);
+    if(isNaN(minutes) || isNaN(seconds)){
+        $(container).text("0:00");
+    } else {
+        $(container).text(minutes + ":" + (seconds < 10 ? '0' : '') + seconds);
+    }
 }
 
 function update() {
