@@ -17,7 +17,7 @@ var updateTimeout,
     secondTimeoutTime = 1000;
 
 function everySecond(){
-    if(currentTime != undefined){
+    if(currentTime != undefined && currentState == 'playing'){
         // Need to update the current time
         if(currentTime / duration <= 1){
             $('#playtime_slider').slider( "option", "value", currentTime / duration * 100);
