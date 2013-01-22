@@ -192,7 +192,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 #controls.off #next:hover,
 #controls.off #next { background-position: -720px -120px !important; }
 
-#playlist { position: absolute; bottom: 100px; width: 100%; padding: 0; margin: 0; }
+#playlist { position: absolute; bottom: 110px; width: 100%; padding: 0; margin: 0; }
 #playlist .now_playing { background: #222; background: rgba(0,0,0,0.7); padding: 2px 4px; }
 #playlist li,
 #playlist li div { width: 100%; margin: 0 auto; text-align: center; }
@@ -238,7 +238,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
   #controls.off #next:hover,
   #controls.off #next { background-position: -416px -280px !important; }
 
-  #playlist { bottom: 220px; }
+  #playlist { bottom: 240px; }
   #playlist .now_playing { padding: 8px 16px; }
 
   #search_song { margin-bottom: 20px; }
