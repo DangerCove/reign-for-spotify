@@ -179,8 +179,8 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 #controls.off #playpause.pause { background-position: -608px -120px !important; }
 
 #playtime{ width: 100%; }
-#currtime, #totaltime { width: 30px; float: left; text-align:center; }
-#playtime_slider { width: 170px; float: left; margin-top:2px; }
+#currtime, #totaltime { width: 36px; float: left; text-align:center; }
+#playtime_slider { width: 158px; float: left; margin-top:2px; }
 
 #shuffle { background-position: -552px -176px !important }
 #shuffle.shuffleon { background-position: -609px -176px !important }
