@@ -31,6 +31,42 @@ function everySecond(){
     secondTimeout = setTimeout(everySecond, secondTimeoutTime);
 }
 
+function deduplicate(songlist){
+    var deduplist = new Array();
+    
+    track = new Object();
+    track.name = songlist[0].name;
+    track.artistname = songlist[0].artists[0].name;
+    track.albumname = songlist[0].album.name;
+    track.href = songlist[0].href
+    
+    deduplist[0] = track;
+    
+    for(i = 1; i < songlist.length; i++){
+        track = new Object();
+        track.name = songlist[i].name;
+        track.artistname = songlist[i].artists[0].name;
+        track.albumname = songlist[i].album.name;
+        track.href = songlist[i].href
+        
+       var dup = false;
+        
+        for(j = 0; j < deduplist.length; j++){
+         
+            console.log("comparing track name: " + deduplist[j].name.toLowerCase() + " to " + track.name.toLowerCase() + " is " + (deduplist[j].name.toLowerCase() == track.name.toLowerCase()));
+            if(deduplist[j].name.toLowerCase() == track.name.toLowerCase() && deduplist[j].artistname.toLowerCase() == track.artistname.toLowerCase() && deduplist[j].albumname.toLowerCase() == track.albumname.toLowerCase()){
+                dup = true;
+                break;
+            }
+        }
+        if(!dup){
+            deduplist.push(track);
+        }
+    }
+    
+    return deduplist;
+}
+
 function setTimeDisplay(container, seconds){
     var minutes = Math.floor(seconds / 60);
     seconds = seconds % 60;
@@ -89,7 +125,7 @@ var displayTrackList = (function(track_list){
                         var song_list = $('<ul></ul>');
                         // Display the list
                         for(i = 0; i < track_list.length; i++){
-                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_list[i].href+'"><span class="search_title">'+track_list[i].name+'</span><br /><span class="search_artist">' + track_list[i].artists[0].name + ' - ' + track_list[i].album.name + '</span></a></li>');
+                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_list[i].href+'"><span class="search_title">'+track_list[i].name+'</span><br /><span class="search_artist">' + track_list[i].artistname + ' - ' + track_list[i].albumname + '</span></a></li>');
                         }
                         $('#songlist').append(song_list);
                         // Todo: Hide the spinner
@@ -155,7 +191,7 @@ $(document).ready(function() {
            
         if(data.tracks && data.tracks.length > 1) {
             // We have more than one track, so display a list of them
-           displayTrackList(data.tracks);
+           displayTrackList(deduplicate(data.tracks));
         } else if (data.tracks && data.tracks.length > 0) {
            // We only have one track returned. It was probably a hit, so play it
           var song = data.tracks[0];
