@@ -26,10 +26,10 @@ function drop(e) {
     
     if(valid){
         // Play the track as provided
-        $.get('/play-track/' + track_uri);
-
-        // Refresh the page to get the new playing track
-        update();
+        $.get('/play-track/' + track_uri, function(e){
+              // Refresh the page to get the new playing track
+              update();
+        });
     }
 }
 

@@ -14,6 +14,8 @@
   <script src="jquery.js"></script>
   <script src="modernizr.min.js"></script>
   <script src="dragdrop.js"></script>
+  <script src="jquery-ui-1.10.0.custom.min.js"></script>
+  <link rel="stylesheet" href="css/ui-darkness/jquery-ui-1.10.0.custom.min.css"/>
 </head>
 <body>
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -32,8 +34,15 @@
       <ol class="clearfix">
         <li><a id="previous" href="/previous">Previous</a></li>
         <li><a id="playpause" href="/playpause">Play/Pause</a></li>
+        <li><a id="shuffle" href="/shuffle">Shuffle</a></li>
         <li><a id="next" href="/next">Next</a></li>
       </ol>
+      <div id="playtime">
+          <div id="currtime">0.00</div>
+          <div id="playtime_slider"></div>
+          <div id="totaltime">0.00</div>
+          <div style="clear:both;"></div>
+      </div>
     </nav>
     <h2 class="visuallyhidden">Playlist</h2>
     <ul id="playlist">
@@ -53,7 +62,7 @@
   <div id="searchlist">
   <!-- The searchlist should contain a close button -->
     <div class="title">
-        Song Search (by Echonest)
+        Song Search
         <div id="closesearchbutton" class="closebutton" >close</div>
         <div style="clear:both;"></div>
     </div>

@@ -161,8 +161,8 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 
 #main { position: relative; background: url('bg.png') 50% 50%; }
 
-#controls { position: absolute; bottom: 36px; width: 168px; margin-left: -84px; left: 50% }
-#controls a { display: block; width: 48px; height: 48px; background: url('sprite.png') no-repeat; font-size: 0; margin: 4px; }
+#controls { position: absolute; bottom: 36px; width: 230px; margin-left: -115px; left: 50% }
+#controls li a { display: block; width: 48px; height: 48px; background: url('sprite.png') no-repeat; font-size: 0; margin: 4px; }
 
 #previous { background-position: -664px -8px !important; }
 #previous:hover { background-position: -664px -64px !important; }
@@ -178,12 +178,21 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 #controls.off #playpause.pause:hover,
 #controls.off #playpause.pause { background-position: -608px -120px !important; }
 
+#playtime{ width: 100%; }
+#currtime, #totaltime { width: 36px; float: left; text-align:center; }
+#playtime_slider { width: 158px; float: left; margin-top:2px; }
+
+#shuffle { background-position: -552px -176px !important }
+#shuffle.shuffleon { background-position: -609px -176px !important }
+#controls.off #shuffle { background-position: -664px -176px !important; }
+#controls.off #shuffle.shuffleon { background-position: -664px -176px !important; }
+
 #next { background-position: -720px -8px !important; }
 #next:hover { background-position: -720px -64px !important }
 #controls.off #next:hover,
 #controls.off #next { background-position: -720px -120px !important; }
 
-#playlist { position: absolute; bottom: 100px; width: 100%; padding: 0; margin: 0; }
+#playlist { position: absolute; bottom: 110px; width: 100%; padding: 0; margin: 0; }
 #playlist .now_playing { background: #222; background: rgba(0,0,0,0.7); padding: 2px 4px; }
 #playlist li,
 #playlist li div { width: 100%; margin: 0 auto; text-align: center; }
@@ -196,8 +205,8 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 @media only screen and (min-width: 35em) {
   body { font-size: 150%; }
 
-  #controls { bottom: 50px; width: 432px; margin-left: -216px; left: 50% }
-  #controls a { width: 128px; height: 128px; margin: 8px; }
+  #controls { bottom: 50px; width: 576px; margin-left: -288px; left: 50% }
+  #controls li a { width: 128px; height: 128px; margin: 8px; }
 
   #previous { background-position: -280px -8px !important; }
   #previous:hover { background-position: -280px -144px !important; }
@@ -212,13 +221,24 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
   #controls.off #playpause { background-position: -8px -280px !important; }
   #controls.off #playpause.pause:hover,
   #controls.off #playpause.pause { background-position: -144px -280px !important }
+ 
+  #playtime{ width: 100%; }
+  #currtime, #totaltime { width: 100px; float: left; text-align:center; }
+  #playtime_slider { width: 376px; float: left; margin-top:7px; }
+
+  #shuffle { background-position: -8px -416px !important }
+  #shuffle:hover { background-position: -144px -416px !important }
+  #shuffle.shuffleon { background-position: -144px -416px !important }
+  #shuffle.shuffleon:hover { background-position: -144px -416px !important }
+  #controls.off #shuffle:hover,
+  #controls.off #shuffle { background-position: -280px -280px !important; }
 
   #next { background-position: -416px -8px !important; }
   #next:hover { background-position: -416px -144px !important; }
   #controls.off #next:hover,
   #controls.off #next { background-position: -416px -280px !important; }
 
-  #playlist { bottom: 220px; }
+  #playlist { bottom: 240px; }
   #playlist .now_playing { padding: 8px 16px; }
 
   #search_song { margin-bottom: 20px; }

@@ -10,12 +10,81 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 var updateTimeout,
     timeout = 30000,
     currentState,
-    allowForce;
+    currentTime,
+    duration,
+    allowForce,
+    secondTimeout,
+    secondTimeoutTime = 1000;
+
+function everySecond(){
+    if(currentTime != undefined && currentState == 'playing'){
+        // Need to update the current time
+        if(currentTime / duration <= 1){
+            $('#playtime_slider').slider( "option", "value", currentTime / duration * 100);
+            setTimeDisplay('#currtime', currentTime);
+            currentTime++;
+        } else {
+            update();
+        }
+    }
+    clearTimeout(secondTimeout);
+    secondTimeout = setTimeout(everySecond, secondTimeoutTime);
+}
+
+function deduplicate(songlist){
+    var deduplist = new Array();
+    
+    track = new Object();
+    track.name = songlist[0].name;
+    track.artistname = songlist[0].artists[0].name;
+    track.albumname = songlist[0].album.name;
+    track.href = songlist[0].href
+    
+    deduplist[0] = track;
+    
+    for(i = 1; i < songlist.length; i++){
+        track = new Object();
+        track.name = songlist[i].name;
+        track.artistname = songlist[i].artists[0].name;
+        track.albumname = songlist[i].album.name;
+        track.href = songlist[i].href
+        
+       var dup = false;
+        
+        for(j = 0; j < deduplist.length; j++){
+            if(deduplist[j].name.toLowerCase() == track.name.toLowerCase() && deduplist[j].artistname.toLowerCase() == track.artistname.toLowerCase() && deduplist[j].albumname.toLowerCase() == track.albumname.toLowerCase()){
+                dup = true;
+                break;
+            }
+        }
+        if(!dup){
+            deduplist.push(track);
+        }
+    }
+    
+    return deduplist;
+}
+
+function setTimeDisplay(container, seconds){
+    var minutes = Math.floor(seconds / 60);
+    seconds = seconds % 60;
+    if(isNaN(minutes) || isNaN(seconds)){
+        $(container).text("0:00");
+    } else {
+        $(container).text(minutes + ":" + (seconds < 10 ? '0' : '') + seconds);
+    }
+}
 
 function update() {
   $.getJSON('/status', function(data) {
     $('#controls').removeClass();
     currentState = data.state;
+    currentTime = data.position;
+    duration = data.duration;
+            
+    setTimeDisplay('#totaltime', duration);
+    setTimeDisplay('#currtime', currentTime);
+            
     allowForce = data['allow_force'];
     switch(currentState) {
       case "playing":
@@ -25,12 +94,24 @@ function update() {
         $('#playpause').attr('class', 'play');
         break;
     }
+
+    switch(data.shuffle){
+        case true:
+            $('#shuffle').attr('class','shuffleon');
+        break;
+        default:
+            $('#shuffle').attr('class','shuffleoff');
+        break;
+    }
+    
     if(currentState == 'off' || allowForce == false) {
       $('#controls').attr('class', 'off');
+      $('#playtime_slider').slider('disable');
     }
     $('.track_cover').attr('src', data.cover);
     $('.now_playing').text(data['now_playing']);
     $('.now_playing').attr('href', data.url);
+            
     clearTimeout(updateTimeout);
     updateTimeout = setTimeout(update, timeout);
   });
@@ -46,8 +127,7 @@ var displayTrackList = (function(track_list){
                         var song_list = $('<ul></ul>');
                         // Display the list
                         for(i = 0; i < track_list.length; i++){
-                        var track_uri = track_list[i].tracks[0].foreign_id.replace('spotify-WW', 'spotify');
-                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'"><span class="search_title">'+track_list[i].title+'</span><br /><span class="search_artist">' + track_list[i].artist_name + '</span></a></li>');
+                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_list[i].href+'"><span class="search_title">'+track_list[i].name+'</span><br /><span class="search_artist">' + track_list[i].artistname + ' - ' + track_list[i].albumname + '</span></a></li>');
                         }
                         $('#songlist').append(song_list);
                         // Todo: Hide the spinner
@@ -68,6 +148,14 @@ var play_search_track = function(id){
 }
 
 $(document).ready(function() {
+  // Set up the play time slider
+  $('#playtime_slider').slider();
+  $('#playtime_slider').on( "slidestop", function( event, ui ) {
+    $.get('updatetime/' + Math.floor(ui.value / 100 * duration), function(data){
+      update();
+    });
+  });
+                  
   $('#controls a').click(function(e) {
     e.preventDefault();
     if(!allowForce) {
@@ -99,18 +187,18 @@ $(document).ready(function() {
                            }
 
     $.ajax({
-      url: 'http://developer.echonest.com/api/v4/song/search?api_key=BEJQGITFAUZFOA9ZM&format=jsonp&results=50&combined=' + escape(search_term) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
-      dataType: 'jsonp',
+      url: 'http://ws.spotify.com/search/1/track.json?q=' + escape(search_term),
+      dataType: 'json',
       success: function(data) {
-        if(data.response.songs && data.response.songs.length > 1) {
+           
+        if(data.tracks && data.tracks.length > 1) {
             // We have more than one track, so display a list of them
-           displayTrackList(data.response.songs);
-        } else if (data.response.songs && data.response.songs.length > 0) {
+           displayTrackList(deduplicate(data.tracks));
+        } else if (data.tracks && data.tracks.length > 0) {
            // We only have one track returned. It was probably a hit, so play it
-          var song = data.response.songs[0];
-          if(song.tracks) {
-            var track = song.tracks[0],
-                track_uri = track.foreign_id.replace('spotify-WW', 'spotify');
+          var song = data.tracks[0];
+          if(song) {
+                track_uri = track.href;
             $.get('/play-track/' + track_uri);
             update();
           }
@@ -123,5 +211,7 @@ $(document).ready(function() {
 
   update();
   updateTimeout = setTimeout(update, timeout);
+  everySecond();
+  secondTimeout = setTimeout(everySecond, secondTimeoutTime);
   dropTrackSetup();
 });

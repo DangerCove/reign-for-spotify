@@ -133,8 +133,17 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
             [self runAppleScript:@"playpause track"];
             commandPath = YES;
         }
+        if([relativePath isEqualToString:@"/shuffle"]) {
+            [self runAppleScript:@"set shuffling to not shuffling"];
+            commandPath = YES;
+        }
         if ([relativePath rangeOfString:@"/play-track/"].location != NSNotFound) {
             [self runAppleScript:[NSString stringWithFormat:@"play track \"%@\"\n", [relativePath substringFromIndex:12]]];
+            commandPath = YES;
+            path = [path substringToIndex:11];
+        }
+        if ([relativePath rangeOfString:@"/updatetime/"].location != NSNotFound) {
+            [self runAppleScript:[NSString stringWithFormat:@"set player position to \"%@\"\n", [relativePath substringFromIndex:12]]];
             commandPath = YES;
             path = [path substringToIndex:11];
         }
@@ -184,6 +193,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
         BOOL starred;
         NSString *url;
         NSString *cover;
+        BOOL shuffle;
         
         if(!state) {
             state = @"off";
@@ -217,6 +227,9 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
 
             NSAppleEventDescriptor *returnStarred = [self runAppleScript:@"starred of current track as boolean"];
             starred = [returnStarred booleanValue];
+            
+            NSAppleEventDescriptor *returnShuffle = [self runAppleScript:@"shuffling as boolean"];
+            shuffle = [returnShuffle booleanValue];
 
             NSAppleEventDescriptor *returnURL = [self runAppleScript:@"spotify url of current track as string"];
             url = [returnURL stringValue];
@@ -246,6 +259,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
                                    cover, @"cover",
                                    nowPlaying, @"now_playing",
                                    [NSNumber numberWithBool:[[DCPreferencesManager instance].preferences boolForKey:@"allowForcedCommands"]], @"allow_force",
+                                   [NSNumber numberWithBool:shuffle],@"shuffle",
                                    nil];
         
         NSError *error;
