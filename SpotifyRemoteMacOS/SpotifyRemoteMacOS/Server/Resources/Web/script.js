@@ -12,6 +12,40 @@ var updateTimeout,
     currentState,
     allowForce;
 
+function deduplicate(songlist){
+    var deduplist = new Array();
+    
+    track = new Object();
+    track.name = songlist[0].name;
+    track.artistname = songlist[0].artists[0].name;
+    track.albumname = songlist[0].album.name;
+    track.href = songlist[0].href
+    
+    deduplist[0] = track;
+    
+    for(i = 1; i < songlist.length; i++){
+        track = new Object();
+        track.name = songlist[i].name;
+        track.artistname = songlist[i].artists[0].name;
+        track.albumname = songlist[i].album.name;
+        track.href = songlist[i].href
+        
+        var dup = false;
+        
+        for(j = 0; j < deduplist.length; j++){
+            if(deduplist[j].name.toLowerCase() == track.name.toLowerCase() && deduplist[j].artistname.toLowerCase() == track.artistname.toLowerCase() && deduplist[j].albumname.toLowerCase() == track.albumname.toLowerCase()){
+                dup = true;
+                break;
+            }
+        }
+        if(!dup){
+            deduplist.push(track);
+        }
+    }
+    
+    return deduplist;
+}
+
 function update() {
   $.getJSON('/status', function(data) {
     $('#controls').removeClass();
@@ -46,8 +80,7 @@ var displayTrackList = (function(track_list){
                         var song_list = $('<ul></ul>');
                         // Display the list
                         for(i = 0; i < track_list.length; i++){
-                        var track_uri = track_list[i].tracks[0].foreign_id.replace('spotify-WW', 'spotify');
-                            song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_uri+'"><span class="search_title">'+track_list[i].title+'</span><br /><span class="search_artist">' + track_list[i].artist_name + '</span></a></li>');
+                             song_list.append('<li><a onclick="play_search_track(this.id)" id="'+track_list[i].href+'"><span class="search_title">'+track_list[i].name+'</span><br /><span class="search_artist">' + track_list[i].artistname + ' - ' + track_list[i].albumname + '</span></a></li>');
                         }
                         $('#songlist').append(song_list);
                         // Todo: Hide the spinner
@@ -99,20 +132,21 @@ $(document).ready(function() {
                            }
 
     $.ajax({
-      url: 'http://developer.echonest.com/api/v4/song/search?api_key=BEJQGITFAUZFOA9ZM&format=jsonp&results=50&combined=' + escape(search_term) + '&bucket=id:spotify-WW&bucket=tracks&limit=true&callback=?',
-      dataType: 'jsonp',
+      url: 'http://ws.spotify.com/search/1/track.json?q=' + escape(search_term),
+           dataType: 'json',
       success: function(data) {
-        if(data.response.songs && data.response.songs.length > 1) {
+        if(data.tracks && data.tracks.length > 1) {
             // We have more than one track, so display a list of them
-           displayTrackList(data.response.songs);
-        } else if (data.response.songs && data.response.songs.length > 0) {
+           displayTrackList(deduplicate(data.tracks));
+        } else if (data.tracks && data.tracks.length > 0) {
            // We only have one track returned. It was probably a hit, so play it
-          var song = data.response.songs[0];
-          if(song.tracks) {
+          var song = data.tracks[0];
+          if(song) {
             var track = song.tracks[0],
-                track_uri = track.foreign_id.replace('spotify-WW', 'spotify');
-            $.get('/play-track/' + track_uri);
-            update();
+                track_uri = track.href;
+           $.get('/play-track/' + track_uri, function(e){
+                 update();
+            });
           }
         } else {
           alert("Didn't find anything for: " + search_term);
