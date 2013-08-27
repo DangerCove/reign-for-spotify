@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Reign on %%PAGE_TITLE%%</title>
   <meta name="description" content="">
-
+	<meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <link rel="stylesheet" href="style.css">
   <script src="jquery.js"></script>
@@ -26,13 +26,14 @@
         </fieldset>
     </form>
   </header>
-  <div id="main" class="container">
-    <h2 class="visuallyhidden">Controls:</h2>
+	<div id="main" class="container">
+		<h2 class="visuallyhidden">Controls:</h2>
     <nav id="controls">
       <ol class="clearfix">
         <li><a id="previous" href="/previous">Previous</a></li>
         <li><a id="playpause" href="/playpause">Play/Pause</a></li>
         <li><a id="next" href="/next">Next</a></li>
+		<li class="fullWidth"><input id="volumeSlider" class="slider" type="range" name="points" min="0" max="100"></li>
       </ol>
     </nav>
     <h2 class="visuallyhidden">Playlist</h2>

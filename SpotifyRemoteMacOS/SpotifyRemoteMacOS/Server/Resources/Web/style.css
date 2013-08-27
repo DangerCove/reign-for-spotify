@@ -183,7 +183,10 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 #controls.off #next:hover,
 #controls.off #next { background-position: -720px -120px !important; }
 
-#playlist { position: absolute; bottom: 100px; width: 100%; padding: 0; margin: 0; }
+.fullWidth {width:100%;}
+#volumeSlider {width:100%; }
+
+#playlist { position: absolute; bottom: 120px; width: 100%; padding: 0; margin: 0; }
 #playlist .now_playing { background: #222; background: rgba(0,0,0,0.7); padding: 2px 4px; }
 #playlist li,
 #playlist li div { width: 100%; margin: 0 auto; text-align: center; }
@@ -196,7 +199,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 @media only screen and (min-width: 35em) {
   body { font-size: 150%; }
 
-  #controls { bottom: 50px; width: 432px; margin-left: -216px; left: 50% }
+  #controls { width: 432px; margin-left: -216px; left: 50% }
   #controls a { width: 128px; height: 128px; margin: 8px; }
 
   #previous { background-position: -280px -8px !important; }
@@ -222,6 +225,13 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
   #playlist .now_playing { padding: 8px 16px; }
 
   #search_song { margin-bottom: 20px; }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) {
+.track_cover { height: 40%; max-height: 300px; max-width: 300px; margin-bottom: 1em; }
 }
 
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }

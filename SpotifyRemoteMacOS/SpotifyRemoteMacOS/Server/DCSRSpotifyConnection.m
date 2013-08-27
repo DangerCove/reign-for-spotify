@@ -133,6 +133,15 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
             [self runAppleScript:@"playpause track"];
             commandPath = YES;
         }
+		if ([relativePath hasPrefix:@"/volumeSlider"])
+		{
+			NSString *sliderValue = [[relativePath componentsSeparatedByString:@"-"] objectAtIndex:1];
+			NSLog(@"slider value is %@",sliderValue);
+			//[self setSystemVolume:sliderValue];
+			[self runAppleScript:[NSString stringWithFormat:@"set sound volume to \"%@\"\n",sliderValue]];
+            commandPath = YES;
+		}
+		
         if ([relativePath rangeOfString:@"/play-track/"].location != NSNotFound) {
             [self runAppleScript:[NSString stringWithFormat:@"play track \"%@\"\n", [relativePath substringFromIndex:12]]];
             commandPath = YES;
