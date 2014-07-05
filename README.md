@@ -1,7 +1,7 @@
 # Overview
 
 Reign for Spotify is a remote for friends, colleagues, housemates and yourself that works in any browser.
-It's available for download at [reignalot.com](http://reignalot.com) and in the [Mac App Store](https://itunes.apple.com/en/app/reign-for-spotify/id553794498?mt=12).
+It's available for download on the [Mac App Store](https://itunes.apple.com/en/app/reign-for-spotify/id553794498?mt=12).
 
 What makes Reign unique is that it uses a web page to feed commands to Spotify. Making any device with a web browser a potential remote; iPhone/Android phones, tablets, but also Playstation Vita's, e-Readers etc.
 
