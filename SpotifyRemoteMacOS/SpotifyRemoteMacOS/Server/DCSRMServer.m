@@ -57,11 +57,22 @@ static const int ddLogLevel = LOG_LEVEL_OFF;
     if(!success)
     {
         DDLogError(@"Error starting HTTP Server: %@", error);
+    } else {
+        
+        // Broadcast on standard http bonjour service as well
+        if([[DCPreferencesManager instance].preferences boolForKey:@"broadcastServer"]) {
+            NSString *httpName = [[NSString alloc] initWithFormat:NSLocalizedString(@"Reign on %@", @"Displayed in the http Bonjour service name"), (__bridge NSString*)CSCopyMachineName()];
+            netService = [[NSNetService alloc] initWithDomain:@"local." type:@"_http._tcp." name:httpName port:httpServer.port];
+            [netService publish];
+        }
     }
     return success;
 }
 - (void)stop {
     [httpServer stop];
+    
+    [netService stop];
+    netService = nil;
 }
 
 - (BOOL)isRunning {

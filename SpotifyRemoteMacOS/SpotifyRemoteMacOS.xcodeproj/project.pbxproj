@@ -42,7 +42,6 @@
 		B50D592F15D291580084B2C2 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B50D591615D291580084B2C2 /* README.txt */; };
 		B50D593815D291D70084B2C2 /* DCSRHTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D593215D291D70084B2C2 /* DCSRHTTPFileResponse.m */; };
 		B50D593915D291D70084B2C2 /* DCSRSpotifyConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D593415D291D70084B2C2 /* DCSRSpotifyConnection.m */; };
-		B50D593D15D292470084B2C2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50D593C15D292470084B2C2 /* Security.framework */; };
 		B50D594315D295290084B2C2 /* DCSRMServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D594215D295290084B2C2 /* DCSRMServer.m */; };
 		B50D595815D296550084B2C2 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = B50D595715D296550084B2C2 /* Web */; };
 		B50D596915D29C4F0084B2C2 /* DCSRMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D596815D29C4F0084B2C2 /* DCSRMClient.m */; };
@@ -73,6 +72,8 @@
 		B5DAB43515D3C00700ACD382 /* DCPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DAB43415D3C00700ACD382 /* DCPreferencesManager.m */; };
 		B5DAB45415D3C1C000ACD382 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DAB45315D3C1C000ACD382 /* ServiceManagement.framework */; };
 		B5DAB45715D3C28300ACD382 /* ReignHelper.app in Copy Helper Files */ = {isa = PBXBuildFile; fileRef = B5DAB45015D3C17700ACD382 /* ReignHelper.app */; };
+		B5DCCB34196816CC006F399E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCCB33196816CC006F399E /* libcrypto.a */; };
+		B5DCCB3619681ACE006F399E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCCB3519681ACE006F399E /* Security.framework */; };
 		B5FDB54D1600854E0034131D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D58C915D290740084B2C2 /* main.m */; };
 		B5FDB54E1600854E0034131D /* DCSRMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D58D015D290740084B2C2 /* DCSRMAppDelegate.m */; };
 		B5FDB54F1600854E0034131D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D58DE15D291580084B2C2 /* GCDAsyncSocket.m */; };
@@ -116,7 +117,6 @@
 		B5FDB5751600854E0034131D /* DCSRHTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B5884E0515DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.m */; };
 		B5FDB5771600854E0034131D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DAB45315D3C1C000ACD382 /* ServiceManagement.framework */; };
 		B5FDB5781600854E0034131D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50D598515D2CB170084B2C2 /* IOKit.framework */; };
-		B5FDB5791600854E0034131D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50D593C15D292470084B2C2 /* Security.framework */; };
 		B5FDB57A1600854E0034131D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50D58BD15D290740084B2C2 /* Cocoa.framework */; };
 		B5FDB57D1600854E0034131D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B50D58C615D290740084B2C2 /* InfoPlist.strings */; };
 		B5FDB57E1600854E0034131D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B50D58CC15D290740084B2C2 /* Credits.rtf */; };
@@ -257,7 +257,6 @@
 		B50D593115D291D70084B2C2 /* DCSRHTTPFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRHTTPFileResponse.h; path = SpotifyRemoteMacOS/Server/DCSRHTTPFileResponse.h; sourceTree = "<group>"; };
 		B50D593215D291D70084B2C2 /* DCSRHTTPFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRHTTPFileResponse.m; path = SpotifyRemoteMacOS/Server/DCSRHTTPFileResponse.m; sourceTree = "<group>"; };
 		B50D593415D291D70084B2C2 /* DCSRSpotifyConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRSpotifyConnection.m; path = SpotifyRemoteMacOS/Server/DCSRSpotifyConnection.m; sourceTree = "<group>"; };
-		B50D593C15D292470084B2C2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B50D594015D2948C0084B2C2 /* DCSRSpotifyConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRSpotifyConnection.h; path = SpotifyRemoteMacOS/Server/DCSRSpotifyConnection.h; sourceTree = "<group>"; };
 		B50D594115D295280084B2C2 /* DCSRMServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRMServer.h; path = SpotifyRemoteMacOS/Server/DCSRMServer.h; sourceTree = "<group>"; };
 		B50D594215D295290084B2C2 /* DCSRMServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRMServer.m; path = SpotifyRemoteMacOS/Server/DCSRMServer.m; sourceTree = "<group>"; };
@@ -304,6 +303,8 @@
 		B5DAB43415D3C00700ACD382 /* DCPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPreferencesManager.m; path = Classes/DCPreferencesManager.m; sourceTree = "<group>"; };
 		B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutoStartHelper.xcodeproj; path = ../Helpers/AutoStartHelper/AutoStartHelper.xcodeproj; sourceTree = "<group>"; };
 		B5DAB45315D3C1C000ACD382 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		B5DCCB33196816CC006F399E /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../OpenSSL/openssl-1.0.1g/lib/libcrypto.a"; sourceTree = "<group>"; };
+		B5DCCB3519681ACE006F399E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B5FDB5941600854E0034131D /* Reign for Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reign for Spotify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FDB597160086530034131D /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		B5FDB599160087AB0034131D /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
@@ -318,7 +319,6 @@
 				B5FDB598160086530034131D /* Sparkle.framework in Frameworks */,
 				B5DAB45415D3C1C000ACD382 /* ServiceManagement.framework in Frameworks */,
 				B50D598615D2CB170084B2C2 /* IOKit.framework in Frameworks */,
-				B50D593D15D292470084B2C2 /* Security.framework in Frameworks */,
 				B50D58BE15D290740084B2C2 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +327,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DCCB3619681ACE006F399E /* Security.framework in Frameworks */,
+				B5DCCB34196816CC006F399E /* libcrypto.a in Frameworks */,
 				B5FDB5771600854E0034131D /* ServiceManagement.framework in Frameworks */,
 				B5FDB5781600854E0034131D /* IOKit.framework in Frameworks */,
-				B5FDB5791600854E0034131D /* Security.framework in Frameworks */,
 				B5FDB57A1600854E0034131D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,9 +361,10 @@
 		B50D58BC15D290740084B2C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5DCCB3519681ACE006F399E /* Security.framework */,
+				B5DCCB33196816CC006F399E /* libcrypto.a */,
 				B5DAB45315D3C1C000ACD382 /* ServiceManagement.framework */,
 				B50D598515D2CB170084B2C2 /* IOKit.framework */,
-				B50D593C15D292470084B2C2 /* Security.framework */,
 				B50D58BD15D290740084B2C2 /* Cocoa.framework */,
 				B50D58BF15D290740084B2C2 /* Other Frameworks */,
 			);
@@ -689,7 +691,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B50D58D715D290750084B2C2 /* Build configuration list for PBXNativeTarget "Reign for Spotify" */;
 			buildPhases = (
-				B50E373615DD0A7D00B773C1 /* Run Receigen Script */,
 				B50D58B515D290740084B2C2 /* Sources */,
 				B50D58B615D290740084B2C2 /* Frameworks */,
 				B50D595F15D29B370084B2C2 /* ShellScript */,
@@ -837,21 +838,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" ${PROJECT_DIR}/SpotifyRemoteMacOS/SpotifyRemoteMacOS-Info.plist)\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" ${PROJECT_DIR}/SpotifyRemoteMacOS/SpotifyRemoteMacOS-Info.plist";
-		};
-		B50E373615DD0A7D00B773C1 /* Run Receigen Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Receigen Script";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/receipt.h",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "INPUT=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nIDENTIFIER=`/usr/libexec/PlistBuddy -c \"Print CFBundleIdentifier\" \"$INPUT\"`\nVERSION=`/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INPUT\"`\nRECEIGEN=\"/Applications/Receigen.app/Contents/MacOS/Receigen\"\n\nif [ -f $RECEIGEN ]; then\nmkdir -p \"$DERIVED_FILES_DIR\"\n$RECEIGEN --identifier $IDENTIFIER --version $VERSION --type receipt --output \"$DERIVED_FILES_DIR/receipt.h\"\nfi";
 		};
 		B5FDB54B1600854E0034131D /* Run Receigen Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1122,6 +1108,7 @@
 		B5FDB5921600854E0034131D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1130,10 +1117,12 @@
 				INFOPLIST_FILE = "SpotifyRemoteMacOS/SpotifyRemoteMacOS-Info.plist";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = MAC_APP_STORE;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DMAC_APP_STORE";
 				PRODUCT_NAME = "Reign for Spotify";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../OpenSSL/openssl-1.0.1g/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1141,6 +1130,7 @@
 		B5FDB5931600854E0034131D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Danger Cove";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1150,10 +1140,12 @@
 				INFOPLIST_FILE = "SpotifyRemoteMacOS/SpotifyRemoteMacOS-Info.plist";
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = MAC_APP_STORE;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DMAC_APP_STORE";
 				PRODUCT_NAME = "Reign for Spotify";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../OpenSSL/openssl-1.0.1g/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

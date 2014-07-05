@@ -12,6 +12,7 @@
 
 @interface DCSRMServer : NSObject {
     HTTPServer *httpServer;
+    NSNetService *netService;
 }
 
 - (BOOL)start;

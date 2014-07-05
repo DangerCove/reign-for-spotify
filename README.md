@@ -25,12 +25,13 @@ What makes Reign unique is that it uses a web page to feed commands to Spotify. 
 ## Things you need to add
 
 * The App Store build uses [Receigen](http://receigen.etiemble.com/) for receipt validation, remove the build step and code in main.m if you don't have it;
+* Related to Receigen, this repo relies on a statically linked OpenSSL library. Clear the `User Header Search Path` to remove it.
 * The dsa_pub.pem file for Sparkle is obviously missing.
 
 # Purpose and pull-requests
 
-* For us, this is a pet project, but we'll try our best to merge additions to our code;
-* Bug-fixes and other stuff we can learn from are awesome;
+* For me, this is a pet project, but we'll try our best to merge additions to our code;
+* Bug-fixes and other stuff I can learn from are awesome;
 * New features are great.
 
 # Credits
