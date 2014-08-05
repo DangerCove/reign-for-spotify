@@ -124,15 +124,13 @@ void PowerCallback (void *lRootPort, io_service_t y,
     [_statusMenu setDelegate:self];
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
-//    NSBundle *bundle = [NSBundle mainBundle];
-//    _statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"icon_status" ofType:@"png"]];
-//    _statusHighlightedImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"icon_status-highlighted" ofType:@"png"]];
     _statusImage = [NSImage imageNamed:@"icon_status"];
-    _statusHighlightedImage = [NSImage imageNamed:@"icon_status-highlighted"];
+    [_statusImage setTemplate:YES];
+    
     _statusActiveImage = [NSImage imageNamed:@"icon_status-active"];
+    [_statusActiveImage setTemplate:YES];
     
     [_statusItem setImage:_statusImage];
-    [_statusItem setAlternateImage:_statusHighlightedImage];
     [_statusItem setMenu:_statusMenu];
     [_statusItem setToolTip:NSLocalizedString(@"Menu bar icon mouse over", nil)];
     [_statusItem setHighlightMode:YES];

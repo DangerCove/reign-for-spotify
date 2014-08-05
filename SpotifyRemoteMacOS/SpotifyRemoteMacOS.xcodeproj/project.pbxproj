@@ -54,9 +54,7 @@
 		B546ABE415DA4E950008D4E6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B546ABE115DA4E950008D4E6 /* NSData+Base64.m */; };
 		B546ABE515DA4E950008D4E6 /* NSString+DataURI.m in Sources */ = {isa = PBXBuildFile; fileRef = B546ABE315DA4E950008D4E6 /* NSString+DataURI.m */; };
 		B546ABF315DA93090008D4E6 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B546ABF215DA93090008D4E6 /* icon.icns */; };
-		B546ABF615DA94620008D4E6 /* icon_status-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABF415DA94610008D4E6 /* icon_status-highlighted.png */; };
 		B546ABF715DA94620008D4E6 /* icon_status.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABF515DA94610008D4E6 /* icon_status.png */; };
-		B546ABFE15DA95770008D4E6 /* icon_status-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABFC15DA95770008D4E6 /* icon_status-highlighted@2x.png */; };
 		B546ABFF15DA95770008D4E6 /* icon_status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABFD15DA95770008D4E6 /* icon_status@2x.png */; };
 		B5884E0615DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B5884E0515DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.m */; };
 		B5B9762115D941AE002E044E /* NSView+DisableSubviews.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B9761F15D941AE002E044E /* NSView+DisableSubviews.m */; };
@@ -129,15 +127,12 @@
 		B5FDB5861600854E0034131D /* DCSRMThemePreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B521DC4D15D927FE00431901 /* DCSRMThemePreferencesView.xib */; };
 		B5FDB5871600854E0034131D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5B9762F15D94811002E044E /* Localizable.strings */; };
 		B5FDB5881600854E0034131D /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B546ABF215DA93090008D4E6 /* icon.icns */; };
-		B5FDB5891600854E0034131D /* icon_status-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABF415DA94610008D4E6 /* icon_status-highlighted.png */; };
 		B5FDB58A1600854E0034131D /* icon_status.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABF515DA94610008D4E6 /* icon_status.png */; };
-		B5FDB58B1600854E0034131D /* icon_status-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABFC15DA95770008D4E6 /* icon_status-highlighted@2x.png */; };
 		B5FDB58C1600854E0034131D /* icon_status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABFD15DA95770008D4E6 /* icon_status@2x.png */; };
 		B5FDB58D1600854E0034131D /* icon_status-active.png in Resources */ = {isa = PBXBuildFile; fileRef = B508C62115DBA08F004B1515 /* icon_status-active.png */; };
 		B5FDB58E1600854E0034131D /* icon_status-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B508C62215DBA08F004B1515 /* icon_status-active@2x.png */; };
 		B5FDB5901600854E0034131D /* ReignHelper.app in Copy Helper Files */ = {isa = PBXBuildFile; fileRef = B5DAB45015D3C17700ACD382 /* ReignHelper.app */; };
 		B5FDB598160086530034131D /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDB597160086530034131D /* Sparkle.framework */; };
-		B5FDB59A160087AB0034131D /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B5FDB599160087AB0034131D /* dsa_pub.pem */; };
 		B5FDB59E160088360034131D /* DCAGeneralPreferencesViewApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FDB59B1600882D0034131D /* DCAGeneralPreferencesViewApp.xib */; };
 		B5FDB5A0160088D00034131D /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5FDB597160086530034131D /* Sparkle.framework */; };
 /* End PBXBuildFile section */
@@ -277,9 +272,7 @@
 		B546ABE215DA4E950008D4E6 /* NSString+DataURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DataURI.h"; sourceTree = "<group>"; };
 		B546ABE315DA4E950008D4E6 /* NSString+DataURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DataURI.m"; sourceTree = "<group>"; };
 		B546ABF215DA93090008D4E6 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ../../icon.icns; sourceTree = "<group>"; };
-		B546ABF415DA94610008D4E6 /* icon_status-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_status-highlighted.png"; sourceTree = "<group>"; };
 		B546ABF515DA94610008D4E6 /* icon_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_status.png; sourceTree = "<group>"; };
-		B546ABFC15DA95770008D4E6 /* icon_status-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_status-highlighted@2x.png"; sourceTree = "<group>"; };
 		B546ABFD15DA95770008D4E6 /* icon_status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_status@2x.png"; sourceTree = "<group>"; };
 		B5884E0415DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRHTTPDynamicFileResponse.h; path = SpotifyRemoteMacOS/Server/DCSRHTTPDynamicFileResponse.h; sourceTree = "<group>"; };
 		B5884E0515DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRHTTPDynamicFileResponse.m; path = SpotifyRemoteMacOS/Server/DCSRHTTPDynamicFileResponse.m; sourceTree = "<group>"; };
@@ -307,7 +300,6 @@
 		B5DCCB3519681ACE006F399E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B5FDB5941600854E0034131D /* Reign for Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reign for Spotify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FDB597160086530034131D /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		B5FDB599160087AB0034131D /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		B5FDB59B1600882D0034131D /* DCAGeneralPreferencesViewApp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DCAGeneralPreferencesViewApp.xib; path = Classes/DCAGeneralPreferencesViewApp.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -571,7 +563,6 @@
 		B50D595915D296840084B2C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B5FDB599160087AB0034131D /* dsa_pub.pem */,
 				B546ABF215DA93090008D4E6 /* icon.icns */,
 				B50D595A15D296840084B2C2 /* Images */,
 			);
@@ -581,10 +572,8 @@
 		B50D595A15D296840084B2C2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B546ABF415DA94610008D4E6 /* icon_status-highlighted.png */,
 				B546ABF515DA94610008D4E6 /* icon_status.png */,
 				B508C62115DBA08F004B1515 /* icon_status-active.png */,
-				B546ABFC15DA95770008D4E6 /* icon_status-highlighted@2x.png */,
 				B546ABFD15DA95770008D4E6 /* icon_status@2x.png */,
 				B508C62215DBA08F004B1515 /* icon_status-active@2x.png */,
 			);
@@ -788,13 +777,10 @@
 				B521DC5015D927FE00431901 /* DCSRMThemePreferencesView.xib in Resources */,
 				B5B9762D15D94811002E044E /* Localizable.strings in Resources */,
 				B546ABF315DA93090008D4E6 /* icon.icns in Resources */,
-				B546ABF615DA94620008D4E6 /* icon_status-highlighted.png in Resources */,
 				B546ABF715DA94620008D4E6 /* icon_status.png in Resources */,
-				B546ABFE15DA95770008D4E6 /* icon_status-highlighted@2x.png in Resources */,
 				B546ABFF15DA95770008D4E6 /* icon_status@2x.png in Resources */,
 				B508C62315DBA08F004B1515 /* icon_status-active.png in Resources */,
 				B508C62415DBA08F004B1515 /* icon_status-active@2x.png in Resources */,
-				B5FDB59A160087AB0034131D /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,9 +799,7 @@
 				B5FDB5861600854E0034131D /* DCSRMThemePreferencesView.xib in Resources */,
 				B5FDB5871600854E0034131D /* Localizable.strings in Resources */,
 				B5FDB5881600854E0034131D /* icon.icns in Resources */,
-				B5FDB5891600854E0034131D /* icon_status-highlighted.png in Resources */,
 				B5FDB58A1600854E0034131D /* icon_status.png in Resources */,
-				B5FDB58B1600854E0034131D /* icon_status-highlighted@2x.png in Resources */,
 				B5FDB58C1600854E0034131D /* icon_status@2x.png in Resources */,
 				B5FDB58D1600854E0034131D /* icon_status-active.png in Resources */,
 				B5FDB58E1600854E0034131D /* icon_status-active@2x.png in Resources */,
@@ -1015,6 +999,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1045,6 +1030,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1110,7 +1096,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotifyRemoteMacOS/SpotifyRemoteMacOS-Prefix.pch";
@@ -1132,7 +1118,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Danger Cove";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

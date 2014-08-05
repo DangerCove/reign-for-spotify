@@ -26,7 +26,6 @@ void PowerCallback (void *lRootPort, io_service_t y,
     IBOutlet NSMenu *_statusMenu;
     NSStatusItem *_statusItem;
     NSImage *_statusImage;
-    NSImage *_statusHighlightedImage;
     NSImage *_statusActiveImage;
     
     IBOutlet NSMenuItem *_serverStatusItem;
