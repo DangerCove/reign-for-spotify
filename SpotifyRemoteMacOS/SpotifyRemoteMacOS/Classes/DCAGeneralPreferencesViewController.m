@@ -19,11 +19,7 @@
 
 - (id)init
 {
-#ifdef MAC_APP_STORE
     return [super initWithNibName:@"DCAGeneralPreferencesViewApp" bundle:nil];
-#else
-    return [super initWithNibName:@"DCAGeneralPreferencesView" bundle:nil];
-#endif
 }
 
 #pragma mark -

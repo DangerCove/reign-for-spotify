@@ -7,19 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#ifdef MAC_APP_STORE
-#import "receipt.h"
+#ifndef DEBUG
+    // Receigen automatically defines DEBUG, so removes those lines from receipt.h!!
+    #include "receipt.h"
 #endif
 
 int main(int argc, char *argv[])
 {
-#ifdef MAC_APP_STORE
-    #ifdef DEBUG
-        return NSApplicationMain(argc, (const char **)argv);
-    #else
-        return CheckReceiptAndRun(argc, (const char **)argv);
-    #endif
-#else
-    return NSApplicationMain(argc, (const char **)argv);
+#ifndef DEBUG
+    NSLog(@"Running in debug mode");
+    return CheckReceiptAndRun(argc, (const char **)argv);
 #endif
+    return NSApplicationMain(argc, (const char **)argv);
 }
