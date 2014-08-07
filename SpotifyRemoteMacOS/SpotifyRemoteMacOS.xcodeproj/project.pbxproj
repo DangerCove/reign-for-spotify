@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B523C4B81615B0E1005E301D /* DCSRThemeLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B523C4B61615B0E1005E301D /* DCSRThemeLocation.m */; };
-		B5DCCB34196816CC006F399E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCCB33196816CC006F399E /* libcrypto.a */; };
+		B566CE29199A0BBE000A5B47 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B566CE28199A0BBE000A5B47 /* libcrypto.a */; };
 		B5DCCB3619681ACE006F399E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCCB3519681ACE006F399E /* Security.framework */; };
 		B5FDB54D1600854E0034131D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D58C915D290740084B2C2 /* main.m */; };
 		B5FDB54E1600854E0034131D /* DCSRMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D58D015D290740084B2C2 /* DCSRMAppDelegate.m */; };
@@ -181,7 +181,6 @@
 		B521DC4F15D927FE00431901 /* DCSRMThemePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRMThemePreferencesViewController.m; path = Classes/DCSRMThemePreferencesViewController.m; sourceTree = "<group>"; };
 		B523C4B51615B0E1005E301D /* DCSRThemeLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRThemeLocation.h; path = Classes/DCSRThemeLocation.h; sourceTree = "<group>"; };
 		B523C4B61615B0E1005E301D /* DCSRThemeLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRThemeLocation.m; path = Classes/DCSRThemeLocation.m; sourceTree = "<group>"; };
-		B52A7BF4199269D1007FFC75 /* receipt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = receipt.h; path = "../../../../../../Library/Developer/Xcode/DerivedData/SpotifyRemoteWorkspace-gufbdcjggztogjcploobmqktyuju/Build/Intermediates/SpotifyRemoteMacOS.build/Debug/Reign for Spotify.build/DerivedSources/receipt.h"; sourceTree = "<group>"; };
 		B546ABE015DA4E950008D4E6 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		B546ABE115DA4E950008D4E6 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		B546ABE215DA4E950008D4E6 /* NSString+DataURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DataURI.h"; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		B546ABF215DA93090008D4E6 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ../../icon.icns; sourceTree = "<group>"; };
 		B546ABF515DA94610008D4E6 /* icon_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_status.png; sourceTree = "<group>"; };
 		B546ABFD15DA95770008D4E6 /* icon_status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_status@2x.png"; sourceTree = "<group>"; };
+		B566CE28199A0BBE000A5B47 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../shared/OpenSSL/openssl-1.0.1g/lib/libcrypto.a"; sourceTree = "<group>"; };
 		B5884E0415DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRHTTPDynamicFileResponse.h; path = SpotifyRemoteMacOS/Server/DCSRHTTPDynamicFileResponse.h; sourceTree = "<group>"; };
 		B5884E0515DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRHTTPDynamicFileResponse.m; path = SpotifyRemoteMacOS/Server/DCSRHTTPDynamicFileResponse.m; sourceTree = "<group>"; };
 		B5B9761E15D941AE002E044E /* NSView+DisableSubviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+DisableSubviews.h"; sourceTree = "<group>"; };
@@ -210,7 +210,6 @@
 		B5DAB43415D3C00700ACD382 /* DCPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPreferencesManager.m; path = Classes/DCPreferencesManager.m; sourceTree = "<group>"; };
 		B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutoStartHelper.xcodeproj; path = ../Helpers/AutoStartHelper/AutoStartHelper.xcodeproj; sourceTree = "<group>"; };
 		B5DAB45315D3C1C000ACD382 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		B5DCCB33196816CC006F399E /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../OpenSSL/openssl-1.0.1g/lib/libcrypto.a"; sourceTree = "<group>"; };
 		B5DCCB3519681ACE006F399E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B5FDB5941600854E0034131D /* Reign for Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reign for Spotify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FDB59B1600882D0034131D /* DCAGeneralPreferencesViewApp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DCAGeneralPreferencesViewApp.xib; path = Classes/DCAGeneralPreferencesViewApp.xib; sourceTree = "<group>"; };
@@ -221,8 +220,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B566CE29199A0BBE000A5B47 /* libcrypto.a in Frameworks */,
 				B5DCCB3619681ACE006F399E /* Security.framework in Frameworks */,
-				B5DCCB34196816CC006F399E /* libcrypto.a in Frameworks */,
 				B5FDB5771600854E0034131D /* ServiceManagement.framework in Frameworks */,
 				B5FDB5781600854E0034131D /* IOKit.framework in Frameworks */,
 				B5FDB57A1600854E0034131D /* Cocoa.framework in Frameworks */,
@@ -235,7 +234,6 @@
 		B50D58AE15D290740084B2C2 = {
 			isa = PBXGroup;
 			children = (
-				B52A7BF4199269D1007FFC75 /* receipt.h */,
 				B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */,
 				B50D58C315D290740084B2C2 /* SpotifyRemoteMacOS */,
 				B50D58DA15D291580084B2C2 /* Vendor */,
@@ -255,8 +253,8 @@
 		B50D58BC15D290740084B2C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B566CE28199A0BBE000A5B47 /* libcrypto.a */,
 				B5DCCB3519681ACE006F399E /* Security.framework */,
-				B5DCCB33196816CC006F399E /* libcrypto.a */,
 				B5DAB45315D3C1C000ACD382 /* ServiceManagement.framework */,
 				B50D598515D2CB170084B2C2 /* IOKit.framework */,
 				B50D58BD15D290740084B2C2 /* Cocoa.framework */,
@@ -863,7 +861,7 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../OpenSSL/openssl-1.0.1g/include";
+				USER_HEADER_SEARCH_PATHS = "~/Documents/Projects/shared/OpenSSL/openssl-1.0.1g/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -887,7 +885,7 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../OpenSSL/openssl-1.0.1g/include";
+				USER_HEADER_SEARCH_PATHS = "~/Documents/Projects/shared/OpenSSL/openssl-1.0.1g/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
