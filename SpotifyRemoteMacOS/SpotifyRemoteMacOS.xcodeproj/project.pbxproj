@@ -181,7 +181,6 @@
 		B521DC4F15D927FE00431901 /* DCSRMThemePreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRMThemePreferencesViewController.m; path = Classes/DCSRMThemePreferencesViewController.m; sourceTree = "<group>"; };
 		B523C4B51615B0E1005E301D /* DCSRThemeLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRThemeLocation.h; path = Classes/DCSRThemeLocation.h; sourceTree = "<group>"; };
 		B523C4B61615B0E1005E301D /* DCSRThemeLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRThemeLocation.m; path = Classes/DCSRThemeLocation.m; sourceTree = "<group>"; };
-		B52A7BF4199269D1007FFC75 /* receipt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = receipt.h; path = "../../../../../../Library/Developer/Xcode/DerivedData/SpotifyRemoteWorkspace-gufbdcjggztogjcploobmqktyuju/Build/Intermediates/SpotifyRemoteMacOS.build/Debug/Reign for Spotify.build/DerivedSources/receipt.h"; sourceTree = "<group>"; };
 		B546ABE015DA4E950008D4E6 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		B546ABE115DA4E950008D4E6 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		B546ABE215DA4E950008D4E6 /* NSString+DataURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DataURI.h"; sourceTree = "<group>"; };
@@ -235,7 +234,6 @@
 		B50D58AE15D290740084B2C2 = {
 			isa = PBXGroup;
 			children = (
-				B52A7BF4199269D1007FFC75 /* receipt.h */,
 				B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */,
 				B50D58C315D290740084B2C2 /* SpotifyRemoteMacOS */,
 				B50D58DA15D291580084B2C2 /* Vendor */,

@@ -13,7 +13,6 @@
 // Other flags: trace
 static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 
-
 @implementation DCSRSpotifyConnection
 
 - (NSAppleEventDescriptor *)runAppleScript:(NSString *)scriptString {
@@ -23,6 +22,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
             "%@\n"
         "end if\n"
     "end tell", scriptString];
+    
     NSAppleScript *script = [[NSAppleScript alloc] initWithSource: fullScript];
     NSAppleEventDescriptor *returnData = [script executeAndReturnError:nil];
     
@@ -109,7 +109,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
 	}
 	
 	NSString *relativePath = [filePath substringFromIndex:[documentRoot length]];
-
+    
     if ([[relativePath pathExtension] isEqualToString:@"css"]) {
         DCSRHTTPFileResponse *response = [[DCSRHTTPFileResponse alloc] initWithFilePath:[self filePathForURI:path] forConnection:self withContentType:@"text/css"];
         return response;
@@ -185,7 +185,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_OFF; // HTTP_LOG_LEVEL_WARN; // |
         NSString *url;
         NSString *cover;
         
-        if(!state) {
+        if(!state || [state isEqualToString:@""]) {
             state = @"off";
             artist = @"";
             name = @"";
