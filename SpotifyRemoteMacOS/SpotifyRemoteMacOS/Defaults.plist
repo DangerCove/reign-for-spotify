@@ -8,8 +8,6 @@
 	<true/>
 	<key>autostartServer</key>
 	<true/>
-	<key>enableStartup</key>
-	<false/>
 	<key>themePath</key>
 	<string></string>
 	<key>serverWelcomeText</key>

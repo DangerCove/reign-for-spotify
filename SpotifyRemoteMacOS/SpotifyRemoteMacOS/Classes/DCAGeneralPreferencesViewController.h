@@ -8,11 +8,6 @@
 
 #import "MASPreferencesViewController.h"
 
-#import "StartAtLoginController.h"
-
-@interface DCAGeneralPreferencesViewController : NSViewController <MASPreferencesViewController> {
-    IBOutlet NSButton *launchAtStartupItem;
-    StartAtLoginController *_startAtLoginController;
-}
+@interface DCAGeneralPreferencesViewController : NSViewController <MASPreferencesViewController>
 
 @end

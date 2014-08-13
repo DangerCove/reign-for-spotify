@@ -44,17 +44,6 @@
 #pragma mark NSViewController
 
 - (void)viewWillAppear {
-    // Startup at login
-    _startAtLoginController = [[StartAtLoginController alloc] init];
-	[_startAtLoginController setBundle:[NSBundle bundleWithPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Library/LoginItems/ReignHelper.app"]]];
-}
-
-#pragma mark -
-#pragma mark Preferences
-
-- (IBAction)toggleStartup:(id)sender {
-    bool enableStartup = [[NSUserDefaults standardUserDefaults] boolForKey:@"enableStartup"];
-    [_startAtLoginController setStartAtLogin:enableStartup];
 }
 
 @end

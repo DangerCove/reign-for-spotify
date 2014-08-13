@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B523C4B81615B0E1005E301D /* DCSRThemeLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B523C4B61615B0E1005E301D /* DCSRThemeLocation.m */; };
 		B566CE29199A0BBE000A5B47 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B566CE28199A0BBE000A5B47 /* libcrypto.a */; };
+		B5A7BECF199B762600B7D52F /* LLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A7BECD199B762600B7D52F /* LLManager.m */; };
+		B5A7BEDF199B777B00B7D52F /* LaunchAtLoginHelper.app in Copy Login Helper */ = {isa = PBXBuildFile; fileRef = B5A7BED2199B762600B7D52F /* LaunchAtLoginHelper.app */; };
 		B5DCCB3619681ACE006F399E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCCB3519681ACE006F399E /* Security.framework */; };
 		B5FDB54D1600854E0034131D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D58C915D290740084B2C2 /* main.m */; };
 		B5FDB54E1600854E0034131D /* DCSRMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D58D015D290740084B2C2 /* DCSRMAppDelegate.m */; };
@@ -42,7 +44,6 @@
 		B5FDB56A1600854E0034131D /* DCSRMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D596815D29C4F0084B2C2 /* DCSRMClient.m */; };
 		B5FDB56B1600854E0034131D /* DCSRMHost.m in Sources */ = {isa = PBXBuildFile; fileRef = B50D596B15D29FC00084B2C2 /* DCSRMHost.m */; };
 		B5FDB56C1600854E0034131D /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DAB42515D3BF5F00ACD382 /* MASPreferencesWindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B5FDB56D1600854E0034131D /* StartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DAB42815D3BF5F00ACD382 /* StartAtLoginController.m */; };
 		B5FDB56E1600854E0034131D /* DCAGeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DAB43015D3BFAC00ACD382 /* DCAGeneralPreferencesViewController.m */; };
 		B5FDB56F1600854E0034131D /* DCPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DAB43415D3C00700ACD382 /* DCPreferencesManager.m */; };
 		B5FDB5701600854E0034131D /* DCSRMServerPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C1D5D015D3DA4C006D99B4 /* DCSRMServerPreferencesViewController.m */; };
@@ -69,30 +70,36 @@
 		B5FDB58C1600854E0034131D /* icon_status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B546ABFD15DA95770008D4E6 /* icon_status@2x.png */; };
 		B5FDB58D1600854E0034131D /* icon_status-active.png in Resources */ = {isa = PBXBuildFile; fileRef = B508C62115DBA08F004B1515 /* icon_status-active.png */; };
 		B5FDB58E1600854E0034131D /* icon_status-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B508C62215DBA08F004B1515 /* icon_status-active@2x.png */; };
-		B5FDB5901600854E0034131D /* ReignHelper.app in Copy Helper Files */ = {isa = PBXBuildFile; fileRef = B5DAB45015D3C17700ACD382 /* ReignHelper.app */; };
 		B5FDB59E160088360034131D /* DCAGeneralPreferencesViewApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FDB59B1600882D0034131D /* DCAGeneralPreferencesViewApp.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B5DAB44F15D3C17700ACD382 /* PBXContainerItemProxy */ = {
+		B5A7BED1199B762600B7D52F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */;
+			containerPortal = B5A7BEC9199B762600B7D52F /* LaunchAtLoginHelper.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = B592DBED15D0F077000133DA;
-			remoteInfo = BlikLoaderHelper;
+			remoteGlobalIDString = 734C379415414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
+		};
+		B5A7BEE0199B777F00B7D52F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5A7BEC9199B762600B7D52F /* LaunchAtLoginHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 734C379315414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B5FDB58F1600854E0034131D /* Copy Helper Files */ = {
+		B5FDB58F1600854E0034131D /* Copy Login Helper */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				B5FDB5901600854E0034131D /* ReignHelper.app in Copy Helper Files */,
+				B5A7BEDF199B777B00B7D52F /* LaunchAtLoginHelper.app in Copy Login Helper */,
 			);
-			name = "Copy Helper Files";
+			name = "Copy Login Helper";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -191,6 +198,10 @@
 		B566CE28199A0BBE000A5B47 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../shared/OpenSSL/openssl-1.0.1g/lib/libcrypto.a"; sourceTree = "<group>"; };
 		B5884E0415DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCSRHTTPDynamicFileResponse.h; path = SpotifyRemoteMacOS/Server/DCSRHTTPDynamicFileResponse.h; sourceTree = "<group>"; };
 		B5884E0515DD866B00C888C0 /* DCSRHTTPDynamicFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCSRHTTPDynamicFileResponse.m; path = SpotifyRemoteMacOS/Server/DCSRHTTPDynamicFileResponse.m; sourceTree = "<group>"; };
+		B5A7BEC9199B762600B7D52F /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = LaunchAtLoginHelper/LaunchAtLoginHelper.xcodeproj; sourceTree = "<group>"; };
+		B5A7BECC199B762600B7D52F /* LLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLManager.h; path = LaunchAtLoginHelper/LLManager.h; sourceTree = "<group>"; };
+		B5A7BECD199B762600B7D52F /* LLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLManager.m; path = LaunchAtLoginHelper/LLManager.m; sourceTree = "<group>"; };
+		B5A7BECE199B762600B7D52F /* LLStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLStrings.h; path = LaunchAtLoginHelper/LLStrings.h; sourceTree = "<group>"; };
 		B5B9761E15D941AE002E044E /* NSView+DisableSubviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+DisableSubviews.h"; sourceTree = "<group>"; };
 		B5B9761F15D941AE002E044E /* NSView+DisableSubviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+DisableSubviews.m"; sourceTree = "<group>"; };
 		B5B9762E15D94811002E044E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -202,13 +213,10 @@
 		B5DAB42315D3BF5F00ACD382 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
 		B5DAB42415D3BF5F00ACD382 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
 		B5DAB42515D3BF5F00ACD382 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
-		B5DAB42715D3BF5F00ACD382 /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
-		B5DAB42815D3BF5F00ACD382 /* StartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLoginController.m; sourceTree = "<group>"; };
 		B5DAB42F15D3BFAC00ACD382 /* DCAGeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCAGeneralPreferencesViewController.h; path = Classes/DCAGeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		B5DAB43015D3BFAC00ACD382 /* DCAGeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCAGeneralPreferencesViewController.m; path = Classes/DCAGeneralPreferencesViewController.m; sourceTree = "<group>"; };
 		B5DAB43315D3C00700ACD382 /* DCPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCPreferencesManager.h; path = Classes/DCPreferencesManager.h; sourceTree = "<group>"; };
 		B5DAB43415D3C00700ACD382 /* DCPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCPreferencesManager.m; path = Classes/DCPreferencesManager.m; sourceTree = "<group>"; };
-		B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutoStartHelper.xcodeproj; path = ../Helpers/AutoStartHelper/AutoStartHelper.xcodeproj; sourceTree = "<group>"; };
 		B5DAB45315D3C1C000ACD382 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		B5DCCB3519681ACE006F399E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B5FDB5941600854E0034131D /* Reign for Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reign for Spotify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,7 +242,6 @@
 		B50D58AE15D290740084B2C2 = {
 			isa = PBXGroup;
 			children = (
-				B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */,
 				B50D58C315D290740084B2C2 /* SpotifyRemoteMacOS */,
 				B50D58DA15D291580084B2C2 /* Vendor */,
 				B50D58BC15D290740084B2C2 /* Frameworks */,
@@ -307,10 +314,10 @@
 		B50D58DA15D291580084B2C2 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B5A7BEC7199B74F700B7D52F /* LaunchAtLoginHelper */,
 				B546ABDF15DA4E950008D4E6 /* Categories */,
 				B5B9761C15D941AE002E044E /* DisableSubviews */,
 				B5DAB42115D3BF5F00ACD382 /* MASPreferences */,
-				B5DAB42615D3BF5F00ACD382 /* StartAtLoginController */,
 				B50D58DB15D291580084B2C2 /* CocoaAsyncSocket */,
 				B50D58DF15D291580084B2C2 /* CocoaHTTPServer */,
 				B50D590615D291580084B2C2 /* CocoaLumberjack */,
@@ -515,6 +522,25 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		B5A7BEC7199B74F700B7D52F /* LaunchAtLoginHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7BEC9199B762600B7D52F /* LaunchAtLoginHelper.xcodeproj */,
+				B5A7BECC199B762600B7D52F /* LLManager.h */,
+				B5A7BECD199B762600B7D52F /* LLManager.m */,
+				B5A7BECE199B762600B7D52F /* LLStrings.h */,
+			);
+			name = LaunchAtLoginHelper;
+			sourceTree = "<group>";
+		};
+		B5A7BECA199B762600B7D52F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7BED2199B762600B7D52F /* LaunchAtLoginHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B5B9761C15D941AE002E044E /* DisableSubviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,15 +559,6 @@
 				B5DAB42515D3BF5F00ACD382 /* MASPreferencesWindowController.m */,
 			);
 			path = MASPreferences;
-			sourceTree = "<group>";
-		};
-		B5DAB42615D3BF5F00ACD382 /* StartAtLoginController */ = {
-			isa = PBXGroup;
-			children = (
-				B5DAB42715D3BF5F00ACD382 /* StartAtLoginController.h */,
-				B5DAB42815D3BF5F00ACD382 /* StartAtLoginController.m */,
-			);
-			path = StartAtLoginController;
 			sourceTree = "<group>";
 		};
 		B5DAB42D15D3BFA000ACD382 /* Preferences */ = {
@@ -563,14 +580,6 @@
 			name = Preferences;
 			sourceTree = "<group>";
 		};
-		B5DAB44815D3C17700ACD382 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B5DAB45015D3C17700ACD382 /* ReignHelper.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -582,12 +591,14 @@
 				B5FDB54C1600854E0034131D /* Sources */,
 				B5FDB5761600854E0034131D /* Frameworks */,
 				B5FDB57C1600854E0034131D /* Resources */,
-				B5FDB58F1600854E0034131D /* Copy Helper Files */,
+				B5FDB58F1600854E0034131D /* Copy Login Helper */,
+				B5A7BEED199B81D600B7D52F /* Sign Login Helper */,
 				B5FDB57B1600854E0034131D /* Update Build Number */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5A7BEE1199B777F00B7D52F /* PBXTargetDependency */,
 			);
 			name = "Reign for Spotify";
 			productName = SpotifyRemoteMacOS;
@@ -621,8 +632,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B5DAB44815D3C17700ACD382 /* Products */;
-					ProjectRef = B5DAB44715D3C17700ACD382 /* AutoStartHelper.xcodeproj */;
+					ProductGroup = B5A7BECA199B762600B7D52F /* Products */;
+					ProjectRef = B5A7BEC9199B762600B7D52F /* LaunchAtLoginHelper.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -633,11 +644,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B5DAB45015D3C17700ACD382 /* ReignHelper.app */ = {
+		B5A7BED2199B762600B7D52F /* LaunchAtLoginHelper.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = ReignHelper.app;
-			remoteRef = B5DAB44F15D3C17700ACD382 /* PBXContainerItemProxy */;
+			path = LaunchAtLoginHelper.app;
+			remoteRef = B5A7BED1199B762600B7D52F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -669,6 +680,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B5A7BEED199B81D600B7D52F /* Sign Login Helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Login Helper";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LOCATION=\"${BUILT_PRODUCTS_DIR}\"/\"${CONTENTS_FOLDER_PATH}\"/Library/LoginItems\nIDENTITY=\"3rd Party Mac Developer Application: B.G. van Amstel\"\ncodesign --verbose --force --sign \"$IDENTITY\" \"$LOCATION/LaunchAtLoginHelper.app\"";
+		};
 		B5FDB54B1600854E0034131D /* Run Receigen Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -714,6 +739,7 @@
 				B5FDB5531600854E0034131D /* HTTPAuthenticationRequest.m in Sources */,
 				B5FDB5541600854E0034131D /* HTTPConnection.m in Sources */,
 				B5FDB5551600854E0034131D /* HTTPMessage.m in Sources */,
+				B5A7BECF199B762600B7D52F /* LLManager.m in Sources */,
 				B5FDB5561600854E0034131D /* HTTPServer.m in Sources */,
 				B5FDB5571600854E0034131D /* MultipartFormDataParser.m in Sources */,
 				B5FDB5581600854E0034131D /* MultipartMessageHeader.m in Sources */,
@@ -737,7 +763,6 @@
 				B5FDB56A1600854E0034131D /* DCSRMClient.m in Sources */,
 				B5FDB56B1600854E0034131D /* DCSRMHost.m in Sources */,
 				B5FDB56C1600854E0034131D /* MASPreferencesWindowController.m in Sources */,
-				B5FDB56D1600854E0034131D /* StartAtLoginController.m in Sources */,
 				B5FDB56E1600854E0034131D /* DCAGeneralPreferencesViewController.m in Sources */,
 				B5FDB56F1600854E0034131D /* DCPreferencesManager.m in Sources */,
 				B5FDB5701600854E0034131D /* DCSRMServerPreferencesViewController.m in Sources */,
@@ -751,6 +776,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5A7BEE1199B777F00B7D52F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LaunchAtLoginHelper;
+			targetProxy = B5A7BEE0199B777F00B7D52F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B50D58C615D290740084B2C2 /* InfoPlist.strings */ = {
@@ -796,7 +829,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -826,7 +859,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -848,7 +881,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotifyRemoteMacOS/SpotifyRemoteMacOS-Prefix.pch";
@@ -871,7 +904,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
