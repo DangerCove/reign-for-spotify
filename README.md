@@ -7,6 +7,8 @@ What makes Reign unique is that it uses a web page to feed commands to Spotify. 
 
 ![Reign for Spotify](https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn1/66291_454088921295852_55691272_n.jpg)
 
+Reign works on 64bit Macs running OS X 10.7 and up.
+
 # Cloning
 
 Reign relies on the [LaunchAtLoginHelper](https://github.com/kgn/LaunchAtLoginHelper) git submodule, so clone Reign as follows:
@@ -52,7 +54,7 @@ Ahmet Ardal - [DisableSubviews](https://github.com/ardalahmet/DisableSubviews)
 
 Vadim Shpakovski - [MASPreferences](https://github.com/shpakovski/MASPreferences)
 
-Alex Zielenski - [StartAtLoginController](https://github.com/alexzielenski/StartAtLoginController)
+David Keegan - [LaunchAtLoginHelper](https://github.com/kgn/LaunchAtLoginHelper)
 
 Andy Matuschak - [Sparkle](http://sparkle.andymatuschak.org/)
 
