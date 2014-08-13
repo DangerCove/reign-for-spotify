@@ -15,8 +15,8 @@
 int main(int argc, char *argv[])
 {
 #ifndef DEBUG
-    NSLog(@"Running in debug mode");
     return CheckReceiptAndRun(argc, (const char **)argv);
 #endif
+    NSLog(@"Running in debug mode");    
     return NSApplicationMain(argc, (const char **)argv);
 }

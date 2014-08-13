@@ -592,7 +592,6 @@
 				B5FDB5761600854E0034131D /* Frameworks */,
 				B5FDB57C1600854E0034131D /* Resources */,
 				B5FDB58F1600854E0034131D /* Copy Login Helper */,
-				B5A7BEED199B81D600B7D52F /* Sign Login Helper */,
 				B5FDB57B1600854E0034131D /* Update Build Number */,
 			);
 			buildRules = (
@@ -680,20 +679,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B5A7BEED199B81D600B7D52F /* Sign Login Helper */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Sign Login Helper";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "LOCATION=\"${BUILT_PRODUCTS_DIR}\"/\"${CONTENTS_FOLDER_PATH}\"/Library/LoginItems\nIDENTITY=\"3rd Party Mac Developer Application: B.G. van Amstel\"\ncodesign --verbose --force --sign \"$IDENTITY\" \"$LOCATION/LaunchAtLoginHelper.app\"";
-		};
 		B5FDB54B1600854E0034131D /* Run Receigen Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -829,7 +814,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -859,7 +844,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -881,7 +866,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotifyRemoteMacOS/SpotifyRemoteMacOS-Prefix.pch";
@@ -904,7 +889,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = SpotifyRemoteMacOS/SpotifyRemoteMacOS.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: B.G. van Amstel (RVZKP45394)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
