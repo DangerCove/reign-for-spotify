@@ -74,7 +74,9 @@ static DCPreferencesManager *gInstance;
         if(error) {
             NSLog(@"Failed to load theme path: %@", [error localizedDescription]);
         }
-        [webUrl startAccessingSecurityScopedResource];
+        if([webUrl respondsToSelector:@selector(startAccessingSecurityScopedResource)]) { // only supported by 10.7.3 or later
+            [webUrl startAccessingSecurityScopedResource]; // start using bookmarked resource
+        }
 
         return webUrl;
     }
@@ -94,8 +96,8 @@ static DCPreferencesManager *gInstance;
 - (void)setWebURL:(NSURL *)url {
     // Changing paths so stop using the previous one
     NSURL *pastURL = [self webURL];
-    if(pastURL) {
-        [pastURL stopAccessingSecurityScopedResource];
+    if(pastURL && [pastURL respondsToSelector:@selector(stopAccessingSecurityScopedResource)]) { // only supported by 10.7.3 or later
+        [pastURL stopAccessingSecurityScopedResource]; // stop using bookmarked resource
     }
     
     if(url == nil) {
