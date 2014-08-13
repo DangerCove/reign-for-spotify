@@ -7,6 +7,12 @@ What makes Reign unique is that it uses a web page to feed commands to Spotify. 
 
 ![Reign for Spotify](https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn1/66291_454088921295852_55691272_n.jpg)
 
+# Cloning
+
+Reign relies on the [LaunchAtLoginHelper](https://github.com/kgn/LaunchAtLoginHelper) git submodule, so clone Reign as follows:
+
+    $ git clone --recursive https://github.com/DangerCove/reign-for-spotify.git
+
 # Compiling
 
 ## Opening the project
